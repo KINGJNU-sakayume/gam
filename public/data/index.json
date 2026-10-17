@@ -1,0 +1,180 @@
+{
+ "generatedAt": "2026-10-17T00:25:48+00:00",
+ "sample": false,
+ "asOf": {
+  "KR": "2026-10-16",
+  "US": "2026-10-17"
+ },
+ "entries": [
+  {
+   "id": "IX:KOSPI",
+   "name": "코스피",
+   "currency": "KRW",
+   "kind": "index",
+   "market": null,
+   "file": "prices/IX-KOSPI.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "IX:KOSDAQ",
+   "name": "코스닥",
+   "currency": "KRW",
+   "kind": "index",
+   "market": null,
+   "file": "prices/IX-KOSDAQ.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "IX:SPX",
+   "name": "S&P 500",
+   "currency": "USD",
+   "kind": "index",
+   "market": null,
+   "file": "prices/IX-SPX.json",
+   "available": true,
+   "asOf": "2026-10-16"
+  },
+  {
+   "id": "IX:NDX",
+   "name": "나스닥 종합",
+   "currency": "USD",
+   "kind": "index",
+   "market": null,
+   "file": "prices/IX-NDX.json",
+   "available": true,
+   "asOf": "2026-10-16"
+  },
+  {
+   "id": "FX:USDKRW",
+   "name": "원/달러",
+   "currency": "KRW",
+   "kind": "index",
+   "market": null,
+   "file": "prices/FX-USDKRW.json",
+   "available": true,
+   "asOf": "2026-10-17"
+  },
+  {
+   "id": "KR:005930",
+   "name": "삼성전자",
+   "currency": "KRW",
+   "kind": "stock",
+   "market": "KOSPI",
+   "file": "prices/KR-005930.json",
+   "available": true,
+   "asOf": "2026-10-16"
+  },
+  {
+   "id": "KR:000660",
+   "name": "SK하이닉스",
+   "currency": "KRW",
+   "kind": "stock",
+   "market": "KOSPI",
+   "file": "prices/KR-000660.json",
+   "available": true,
+   "asOf": "2026-10-16"
+  },
+  {
+   "id": "KR:207940",
+   "name": "삼성바이오로직스",
+   "currency": "KRW",
+   "kind": "stock",
+   "market": "KOSPI",
+   "file": "prices/KR-207940.json",
+   "available": true,
+   "asOf": "2026-10-16"
+  },
+  {
+   "id": "KR:012450",
+   "name": "한화에어로스페이스",
+   "currency": "KRW",
+   "kind": "stock",
+   "market": "KOSPI",
+   "file": "prices/KR-012450.json",
+   "available": true,
+   "asOf": "2026-10-16"
+  },
+  {
+   "id": "US:NVDA",
+   "name": "엔비디아",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NASDAQ",
+   "file": "prices/US-NVDA.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "US:META",
+   "name": "메타",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NASDAQ",
+   "file": "prices/US-META.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "US:TSLA",
+   "name": "테슬라",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NASDAQ",
+   "file": "prices/US-TSLA.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "US:SPCX",
+   "name": "스페이스X",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NASDAQ",
+   "file": "prices/US-SPCX.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "US:GOOGL",
+   "name": "알파벳",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NASDAQ",
+   "file": "prices/US-GOOGL.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "US:AMD",
+   "name": "AMD",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NASDAQ",
+   "file": "prices/US-AMD.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "US:SPOT",
+   "name": "스포티파이",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NYSE",
+   "file": "prices/US-SPOT.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  },
+  {
+   "id": "US:PANW",
+   "name": "팔로알토 네트웍스",
+   "currency": "USD",
+   "kind": "stock",
+   "market": "NASDAQ",
+   "file": "prices/US-PANW.json",
+   "available": true,
+   "asOf": "2026-10-15"
+  }
+ ]
+}
