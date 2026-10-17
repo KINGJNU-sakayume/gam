@@ -29,9 +29,7 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm test
       - run: node scripts/check-notes.mjs
-      # Typecheck is reported but does not block a deploy (it was first verified only against a type shim).
       - run: npm run typecheck
-        continue-on-error: true
 
   build:
     needs: test
