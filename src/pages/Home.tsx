@@ -29,7 +29,12 @@ export function HomePage() {
           const b = bars[e.id];
           return (
             <div className="index-card" key={e.id}>
-              <div className="index-name">{e.name}</div>
+              <div className="index-name">
+                {e.name}
+                {c && !e.id.startsWith('FX:') && c.date < (cards?.asOf[e.currency === 'KRW' ? 'KR' : 'US'] ?? '') && (
+                  <span className="stale-inline" title="최신 일봉이 아직 없습니다"> · {shortDate(c.date)}</span>
+                )}
+              </div>
               <div className="index-close num">{c ? c.close.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : '–'}</div>
               <div className="index-chg"><Chg x={c?.chg1d} /> <span className="muted">20일</span> <Chg x={c?.chg20d} /></div>
               {b && <Spark values={b.c.slice(-60)} />}
@@ -89,7 +94,12 @@ export function HomePage() {
                       <span className="tick">{e.id.split(':')[1]}</span>
                       {note?.changed && <span className="dot" title="오늘 AI 노트 있음" />}
                     </td>
-                    <td className="r num">{c ? price(c.close, e.currency) : '–'}</td>
+                    <td className="r num">
+                      {c ? price(c.close, e.currency) : '–'}
+                      {c && cards?.asOf[e.currency === 'KRW' ? 'KR' : 'US'] && c.date < cards.asOf[e.currency === 'KRW' ? 'KR' : 'US'] && (
+                        <span className="stale" title="이 종목은 아직 최신 일봉이 들어오지 않았습니다">{shortDate(c.date)}</span>
+                      )}
+                    </td>
                     <td className="r"><Chg x={c?.chg1d} /></td>
                     <td className="r"><Chg x={c?.chg5d} /></td>
                     <td className="r"><Chg x={c?.chg20d} /></td>

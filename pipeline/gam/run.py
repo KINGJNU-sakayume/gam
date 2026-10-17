@@ -25,7 +25,9 @@ def _entries(watch: dict) -> list[dict]:
 
 
 def _market_of(entry: dict) -> str:
-    return "KR" if entry.get("currency") == "KRW" and not entry["id"].startswith("FX:") else "US"
+    if entry["id"].startswith("FX:"):
+        return "FX"
+    return "KR" if entry.get("currency") == "KRW" else "US"
 
 
 def _now() -> str:
@@ -52,9 +54,14 @@ def cmd_fetch(out: Path) -> int:
                 raise RuntimeError("invalid data: " + "; ".join(problems))
             if old is not None and len(s) < 0.9 * len(old):
                 raise RuntimeError(f"only {len(s)} rows, previously {len(old)}; keeping the previous file")
+            dropped_tail = s.meta.pop("droppedTail", None)
             S.save(s, path)
-            results.append({"id": e["id"], "ok": True, "source": source, "rows": len(s), "asOf": s.d[-1]})
-            print(f"ok   {e['id']:<12} {source:<6} {len(s):>5} rows, last {s.d[-1]}")
+            res = {"id": e["id"], "ok": True, "source": source, "rows": len(s), "asOf": s.d[-1]}
+            if dropped_tail:
+                res["droppedTail"] = dropped_tail
+            results.append(res)
+            note = f" (vendor sent {dropped_tail} with missing prices; dropped)" if dropped_tail else ""
+            print(f"ok   {e['id']:<12} {source:<6} {len(s):>5} rows, last {s.d[-1]}{note}")
         except Exception as err:  # noqa: BLE001
             results.append({"id": e["id"], "ok": False, "error": str(err)[:300],
                             "asOf": old.d[-1] if old else None})

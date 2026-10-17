@@ -3,10 +3,11 @@
 - 단계: **M1 구현 중**
 - 시세 출처: Yahoo Finance(`yfinance`), 한국 종목은 FinanceDataReader를 예비로 둔다. 한국투자증권 계좌가 생기면 M4에서 교체한다.
 - 공시·뉴스: 아직 수집하지 않는다. 매일 노트 작성 시 Claude가 큰 변화가 있는 종목만 웹에서 조사하고 URL을 단다(`docs/05`).
-- 확인되지 않은 것: 실제 GitHub Actions에서의 첫 수집. 개발 환경에서는 외부 시세 사이트에 접속할 수 없어 합성 샘플 데이터로만 시험했다.
+- 첫 수집(2026-10-17): 17개 모두 성공, 약 10년치 일봉과 수정 계수 확보.
+- 알려진 문제: 같은 실행에서도 Yahoo가 일부 종목의 마지막 날 일봉을 늦게 준다(10-17 실행에서 미국 종목·코스피·코스닥이 10-15에서 멈춤). 수집은 그런 행을 버리고 `status.json`에 `droppedTail`로 남긴다. 사이트는 시장 기준일보다 늦은 종목에 날짜를 붉게 표시한다. 토요일 10:30(KST) 보충 수집을 둔다.
+- 원/달러는 시장 기준일(`asOf.KR`, `asOf.US`)에 섞지 않고 `asOf.FX`로 따로 둔다.
 
 ## 다음 할 일
 
-1. GitHub에 레포를 올리고 Pages(Source: GitHub Actions)를 켠다.
-2. **Actions → Update data → Run workflow**로 첫 수집을 확인한다.
-3. Claude Code 예약 작업으로 `daily-note`를 매일 07:00(KST)에 돌린다.
+1. 다음 정기 수집에서 `droppedTail`이 반복되는지 본다. 반복되면 마지막 행을 다른 방법(`Ticker.history`)으로 다시 받는다.
+2. Claude 예약 작업 "gam 매일 노트"가 화–토 06:45(KST)에 `daily-note`를 돌린다. 첫 결과를 확인한다.

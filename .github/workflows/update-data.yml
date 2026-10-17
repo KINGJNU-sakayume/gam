@@ -1,10 +1,12 @@
 name: Update data
 
 # Korean close: 16:10 KST (07:10 UTC) Mon–Fri. US close: 06:30 KST (21:30 UTC) Mon–Fri ET evenings.
+# Saturday 10:30 KST catch-up, in case the vendor had not finalised Friday's bars at 06:30.
 on:
   schedule:
     - cron: '10 7 * * 1-5'
     - cron: '30 21 * * 1-5'
+    - cron: '30 1 * * 6'
   workflow_dispatch:
 
 permissions:
@@ -20,8 +22,8 @@ jobs:
   data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: pip
@@ -49,7 +51,7 @@ jobs:
           s = json.load(open('public/data/status.json'))
           print('| id | ok | last | note |\n|---|---|---|---|')
           for r in s['results']:
-              print(f"| {r['id']} | {'✅' if r['ok'] else '❌'} | {r.get('asOf') or ''} | {r.get('error', r.get('source', ''))[:120]} |")
+              print(f"| {r['id']} | {'✅' if r['ok'] else '❌'} | {r.get('asOf') or ''} | {(r.get('error') or r.get('source', ''))[:120]}{' · dropped incomplete ' + r['droppedTail'] if r.get('droppedTail') else ''} |")
           EOF
 
   # Pushes made with GITHUB_TOKEN do not trigger other workflows, so this run deploys the site itself.

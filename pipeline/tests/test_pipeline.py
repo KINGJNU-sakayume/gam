@@ -128,5 +128,28 @@ class Cards(unittest.TestCase):
         self.assertEqual(card["history"], 90)
 
 
+class Fetch(unittest.TestCase):
+    def test_market_of_keeps_fx_out_of_market_dates(self):
+        from gam.run import _market_of
+        self.assertEqual(_market_of({"id": "FX:USDKRW", "currency": "KRW"}), "FX")
+        self.assertEqual(_market_of({"id": "IX:KOSPI", "currency": "KRW"}), "KR")
+        self.assertEqual(_market_of({"id": "US:NVDA", "currency": "USD"}), "US")
+
+    def test_frame_with_incomplete_last_row(self):
+        try:
+            import pandas as pd
+        except ImportError:
+            self.skipTest("pandas not installed")
+        from gam.fetch import _from_frame
+        idx = pd.to_datetime(["2026-10-14", "2026-10-15", "2026-10-16"])
+        df = pd.DataFrame({"Open": [10, 11, None], "High": [11, 12, None], "Low": [9, 10, None],
+                           "Close": [10.5, 11.5, 11.8], "Adj Close": [10.4, 11.5, 11.8], "Volume": [1, 2, 3]}, index=idx)
+        s = _from_frame("US:X", df, has_adj=True)
+        self.assertEqual(s.d, ["2026-10-14", "2026-10-15"])
+        self.assertEqual(s.meta["droppedTail"], "2026-10-16")
+        self.assertAlmostEqual(s.f[0], 10.4 / 10.5)
+        self.assertEqual(s.validate(), [])
+
+
 if __name__ == "__main__":
     unittest.main()

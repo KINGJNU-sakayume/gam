@@ -12,10 +12,15 @@ import numpy as np
 from .series import Series
 
 
+def _day(i) -> str:
+    return i.date().isoformat() if hasattr(i, "date") else str(i)[:10]
+
+
 def _from_frame(ticker_id: str, df, has_adj: bool) -> Series:
+    raw_last = _day(df.index[-1]) if len(df) else None
     df = df.dropna(subset=["Open", "High", "Low", "Close"])
     df = df[df["Close"] > 0]
-    dates = [i.date().isoformat() if hasattr(i, "date") else str(i)[:10] for i in df.index]
+    dates = [_day(i) for i in df.index]
     c = df["Close"].to_numpy(float)
     f = (df["Adj Close"].to_numpy(float) / c) if has_adj and "Adj Close" in df else np.ones(len(c))
     f = np.where(np.isfinite(f) & (f > 0), f, 1.0)
@@ -24,7 +29,10 @@ def _from_frame(ticker_id: str, df, has_adj: bool) -> Series:
     h = np.maximum(h, np.maximum(o, c))
     l = np.minimum(l, np.minimum(o, c))
     v = df["Volume"].fillna(0).to_numpy(float) if "Volume" in df else np.zeros(len(c))
-    return Series(ticker_id, dates, o, h, l, c, v, f)
+    s = Series(ticker_id, dates, o, h, l, c, v, f)
+    if raw_last and dates and raw_last > dates[-1]:
+        s.meta["droppedTail"] = raw_last  # reported in status.json, not saved with the prices
+    return s
 
 
 def fetch_yahoo(ticker_id: str, symbol: str, years: int) -> Series:
