@@ -19,7 +19,7 @@ function EquityLine({ points }: { points: { date: string; krw: number }[] }) {
         <polyline points={xy.join(' ')} fill="none" strokeWidth="1.6" />
       </svg>
       <figcaption className="muted small">
-        {shortDate(points[0].date)} {money(points[0].krw, 'KRW')} → {shortDate(points[points.length - 1].date)} {money(points[points.length - 1].krw, 'KRW')}
+        {shortDate(points[0].date)} {money(points[0].krw, 'KRW')}에서 {shortDate(points[points.length - 1].date)} {money(points[points.length - 1].krw, 'KRW')}까지
       </figcaption>
     </figure>
   );
@@ -30,12 +30,12 @@ function ReviewPanel() {
   useEffect(() => { loadReview().then(setReview); }, []);
   if (review === undefined) return null;
   return (
-    <Panel title="Claude의 기록 리뷰" aside={review ? <span className="muted small">{review.date}{review.period ? ` · ${review.period}` : ''}</span> : null}>
+    <Panel title="Claude의 기록 리뷰" aside={review ? <span className="muted small">{review.period ?? review.date}</span> : null}>
       {!review ? <Empty>아직 리뷰가 없습니다. 설정에서 기록을 GitHub에 올리면 주말 리뷰가 여기에 나옵니다.</Empty> : (
         <>
-          <p className="note-text">{review.summary}</p>
+          <p className="prose">{review.summary}</p>
           {review.sections.map((s) => (
-            <div key={s.title} className="commentary"><b>{s.title}</b><p className="note-text">{s.text}</p></div>
+            <div key={s.title} className="commentary"><h3>{s.title}</h3><p className="prose">{s.text}</p></div>
           ))}
         </>
       )}
@@ -71,12 +71,12 @@ export function AccountPage() {
   return (
     <div className="page">
       <div className="summary">
-        <div><span className="muted">총평가(원화 환산)</span><b className="num big">{money(totalKrw, 'KRW')}</b>
+        <div><span className="muted">총평가(원화 환산)</span><b className="num total">{money(totalKrw, 'KRW')}</b>
           {totalKrw !== null && startKrw ? <Chg x={totalKrw / startKrw - 1} digits={2} /> : null}</div>
         <div><span className="muted">원화 현금</span><b className="num">{money(account.cash.KRW, 'KRW')}</b></div>
         <div><span className="muted">달러 현금</span><b className="num">{money(account.cash.USD, 'USD')}</b></div>
-        <div><span className="muted">실현 손익</span><b className="num">{money(account.realized.KRW, 'KRW')} · {money(account.realized.USD, 'USD')}</b></div>
-        <div><span className="muted">수수료·세금</span><b className="num">{money(account.fees.KRW, 'KRW')} · {money(account.fees.USD, 'USD')}</b></div>
+        <div><span className="muted">실현 손익</span><b className="num">{money(account.realized.KRW, 'KRW')}</b><b className="num">{money(account.realized.USD, 'USD')}</b></div>
+        <div><span className="muted">수수료·세금</span><b className="num">{money(account.fees.KRW, 'KRW')}</b><b className="num">{money(account.fees.USD, 'USD')}</b></div>
       </div>
       {rate !== null && <p className="fine">원/달러 {rate.toLocaleString('ko-KR', { maximumFractionDigits: 2 })} (최근 종가) 기준. 시작 금액 대비 수익률은 같은 환율로 계산합니다.</p>}
 
@@ -87,7 +87,7 @@ export function AccountPage() {
       <Panel title="보유 종목">
         {rows.length === 0 ? <Empty>보유 종목이 없습니다.</Empty> : (
           <div className="table-wrap">
-            <table>
+            <table className="grid">
               <thead><tr><th>종목</th><th className="r">수량</th><th className="r">평균 단가</th><th className="r">현재가</th><th className="r">평가액</th><th className="r">평가 손익</th></tr></thead>
               <tbody>
                 {rows.map((r) => (
@@ -109,7 +109,7 @@ export function AccountPage() {
       <Panel title="주문 내역">
         {journal.orders.length === 0 ? <Empty>주문이 없습니다.</Empty> : (
           <div className="table-wrap">
-            <table>
+            <table className="grid">
               <thead><tr><th>주문일</th><th>종목</th><th>내용</th><th>상태</th><th>체결</th><th>이유</th><th /></tr></thead>
               <tbody>
                 {[...journal.orders].reverse().map((o) => {

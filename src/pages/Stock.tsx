@@ -8,8 +8,8 @@ import { validateOrder } from '../engine/validate';
 import { newId } from '../store/journal';
 import { link, useApp, useBars } from '../state';
 import { Chart } from '../ui/Chart';
-import { Chg, Empty, Panel, RangeBar } from '../ui/bits';
-import { FLAG_LABEL, money, pct, price, shortDate } from '../ui/format';
+import { Chg, Empty, KV, Panel, RangeBar } from '../ui/bits';
+import { FLAG_LABEL, money, pct, price, shortDate, tone } from '../ui/format';
 
 const SMA_COLORS = { 20: '#b8862b', 60: '#6b8f3a', 120: '#7a5ea8' } as const;
 
@@ -27,19 +27,31 @@ export function StockPage({ id }: { id: string }) {
   const note = noteById[id];
   const currency = inst.currency;
   const fmt = (x: number) => price(x, currency);
+  const n = b.d.length - 1;
+  const chg = n > 0 ? (b.c[n] * b.f[n]) / (b.c[n - 1] * b.f[n - 1]) - 1 : null;
+  const diff = n > 0 ? b.c[n] - b.c[n - 1] * (b.f[n - 1] / b.f[n]) : null;
 
   return (
     <div className="page">
-      <header className="stock-head">
-        <div>
-          <h1>{inst.name} <span className="tick">{id.split(':')[1]} · {inst.market}</span></h1>
-          <div className="stock-price">
-            <span className="num big">{price(b.c[b.c.length - 1], currency)}</span>
-            <Chg x={card?.chg1d} digits={2} />
-            <span className="muted">{shortDate(b.d[b.d.length - 1])} 종가</span>
-          </div>
+      <header className="quote">
+        <div className="quote-id">
+          <h1>{inst.name}</h1>
+          <span className="code">{id.split(':')[1]}</span>
+          <span className="tag">{inst.market}</span>
         </div>
-        <div className="chips">{card?.flags.map((f) => <span key={f} className="chip">{FLAG_LABEL[f] ?? f}</span>)}</div>
+        <div className={`quote-price ${tone(chg)}`}>
+          <span className="num quote-last">{price(b.c[n], currency)}</span>
+          <span className="num">{diff !== null && Math.abs(diff) > 0 ? `${diff > 0 ? '▲' : '▼'} ${price(Math.abs(diff), currency)}` : ''}</span>
+          <Chg x={chg} />
+        </div>
+        <KV items={[
+          ['시가', <span className="num">{price(b.o[n], currency)}</span>],
+          ['고가', <span className="num up">{price(b.h[n], currency)}</span>],
+          ['저가', <span className="num down">{price(b.l[n], currency)}</span>],
+          ['거래량', <span className="num">{Math.round(b.v[n]).toLocaleString('ko-KR')}</span>],
+          ['기준일', <span className="num">{b.d[n]}</span>],
+        ]} />
+        {card && card.flags.length > 0 && <div className="flags">{card.flags.map((f) => <span key={f} className="flag">{FLAG_LABEL[f] ?? f}</span>)}</div>}
       </header>
 
       <StockChart b={b} instId={id} format={fmt} />
@@ -50,10 +62,10 @@ export function StockPage({ id }: { id: string }) {
           <ForecastPanel inst={inst} b={b} />
         </div>
         <div className="stack">
-          <Panel title="AI 노트" aside={note ? null : undefined}>
+          <Panel title="노트" aside={note ? <span>Claude 작성</span> : undefined}>
             {note ? (
               <>
-                <p className="note-text">{note.text}</p>
+                <p className="prose">{note.text}</p>
                 {note.sources && note.sources.length > 0 && (
                   <ul className="sources">{note.sources.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a></li>)}</ul>
                 )}
@@ -62,11 +74,15 @@ export function StockPage({ id }: { id: string }) {
             {aiForecasts.filter((f) => f.ticker === id).slice(-1).map((f) => {
               const s = scoreForecast(f, b);
               return (
-                <p key={f.id} className="ai-forecast">
-                  AI 예측({f.madeAfter} 기준 {f.horizon}거래일): 상승 확률 <b>{Math.round(f.pUp * 100)}%</b>, 80% 구간 {pct(f.low)} ~ {pct(f.high)}
-                  {s.status === 'open' ? <span className="muted"> · {s.remaining}일 남음</span> : s.status === 'scored' ? <span className="muted"> · 결과 {pct(s.ret)}</span> : null}
-                  {f.why && <><br /><span className="muted">{f.why}</span></>}
-                </p>
+                <div key={f.id} className="ai-forecast">
+                  <KV items={[
+                    ['AI 예측', `${f.madeAfter} 종가부터 ${f.horizon}거래일`],
+                    ['오를 확률', <b className="num">{Math.round(f.pUp * 100)}%</b>],
+                    ['80% 구간', <span className="num">{pct(f.low)} ~ {pct(f.high)}</span>],
+                    ['상태', s.status === 'open' ? `${s.remaining}거래일 남음` : s.status === 'scored' ? <>결과 <Chg x={s.ret} /></> : '시세 없음'],
+                  ]} />
+                  {f.why && <p className="muted small">{f.why}</p>}
+                </div>
               );
             })}
             <p className="fine">AI 노트는 판단 재료이며 투자 권유가 아닙니다.</p>
@@ -93,7 +109,7 @@ function StockChart({ b, instId, format }: { b: Bars; instId: string; format: (x
     });
   }, [journal, b, instId, instruments]);
   return (
-    <div className="panel chart-panel">
+    <div className="chart-pane">
       <Chart o={adj.o} h={adj.h} l={adj.l} c={adj.c} v={b.v} labels={b.d} overlays={overlays} markers={markers} rsi={rsi} format={format} />
       <p className="fine">수정주가 기준 차트입니다. 휠·버튼으로 확대, 끌어서 이동. ▲매수 ▼매도</p>
     </div>
@@ -110,14 +126,16 @@ function StatsPanel({ card, currency }: { card: NonNullable<ReturnType<typeof us
         <div><dt>거래량(20일 평균 대비)</dt><dd className="num">{card.volRatio20 ? `${card.volRatio20.toFixed(2)}배` : '–'}</dd></div>
         <div><dt>52주 고점 대비</dt><dd><Chg x={card.from52wHigh} /></dd></div>
         <div><dt>52주 저점 대비</dt><dd><Chg x={card.from52wLow} /></dd></div>
-        <div><dt>20 · 60 · 120일선</dt><dd className="num">{(['20', '60', '120'] as const).map((k) => price(card.sma[k], currency)).join(' · ')}</dd></div>
+        <div><dt>20일선</dt><dd className="num">{price(card.sma['20'], currency)}</dd></div>
+        <div><dt>60일선</dt><dd className="num">{price(card.sma['60'], currency)}</dd></div>
+        <div><dt>120일선</dt><dd className="num">{price(card.sma['120'], currency)}</dd></div>
       </dl>
       <h3 className="sub">앞으로 20거래일 수익률 분포</h3>
       {card.pattern
-        ? <RangeBar stats={card.pattern} scale={scale} label={`비슷한 과거 ${card.pattern.matches}회`} />
-        : <p className="muted small">유사 패턴: 데이터 부족(상장 {card.history}거래일)</p>}
-      {card.baseRate && <RangeBar stats={card.baseRate} scale={scale} label={`기저율(지난 5년 ${card.baseRate.samples}일)`} />}
-      <p className="fine">유사 패턴은 최근 40일 모양이 비슷했던 과거 구간(관심 종목 전체, 변동성 보정) 뒤의 결과입니다. 기저율과 함께 보세요. 막대는 10–90% 범위, 세로선은 중앙값입니다.</p>
+        ? <RangeBar stats={card.pattern} scale={scale} label={`비슷했던 과거 ${card.pattern.matches}번`} />
+        : <p className="muted small">비슷한 과거 구간을 찾기에는 기록이 짧습니다(상장 후 {card.history}거래일).</p>}
+      {card.baseRate && <RangeBar stats={card.baseRate} scale={scale} label={`평소(지난 5년 ${card.baseRate.samples}일)`} />}
+      <p className="fine">위 막대는 최근 40일과 모양이 비슷했던 과거 구간(관심 종목 전체, 변동성 보정) 뒤의 결과, 아래 막대는 이 종목의 평소 20일 결과입니다. 둘을 함께 봐야 유사 구간이 정말 다른지 알 수 있습니다.</p>
     </Panel>
   );
 }
@@ -162,43 +180,62 @@ function OrderPanel({ inst, b, allBars }: { inst: Instrument; b: Bars; allBars: 
   };
 
   return (
-    <Panel title="모의 주문" aside={<span className="muted small">보유 {held}주 · 현금 {money(cash, inst.currency)}</span>}>
-      <form className="order" onSubmit={submit}>
-        <div className="seg" role="group" aria-label="매수 매도">
-          <button type="button" className={side === 'buy' ? 'on buy' : ''} onClick={() => { setSide('buy'); if (type === 'stop') setType('market'); }}>매수</button>
-          <button type="button" className={side === 'sell' ? 'on sell' : ''} onClick={() => setSide('sell')}>매도</button>
+    <section className={`ticket ticket-${side}`} aria-label="모의 주문">
+      <div className="ticket-tabs" role="tablist">
+        <button type="button" role="tab" aria-selected={side === 'buy'} className="t-buy" onClick={() => { setSide('buy'); if (type === 'stop') setType('market'); }}>매수</button>
+        <button type="button" role="tab" aria-selected={side === 'sell'} className="t-sell" onClick={() => setSide('sell')}>매도</button>
+      </div>
+      <form className="ticket-body" onSubmit={submit}>
+        <div className="ticket-row">
+          <span className="ticket-label">종류</span>
+          <div className="seg" role="group" aria-label="주문 종류">
+            {(['market', 'limit', 'stop'] as const).map((t) => (
+              <button key={t} type="button" aria-pressed={type === t} disabled={t === 'stop' && side === 'buy'} onClick={() => setType(t)}>
+                {t === 'market' ? '시장가' : t === 'limit' ? '지정가' : '손절'}
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="seg" role="group" aria-label="주문 종류">
-          {(['market', 'limit', 'stop'] as const).map((t) => (
-            <button key={t} type="button" className={type === t ? 'on' : ''} disabled={t === 'stop' && side === 'buy'} onClick={() => setType(t)}>
-              {t === 'market' ? '시장가' : t === 'limit' ? '지정가' : '손절'}
-            </button>
-          ))}
-        </div>
-        <label>수량<input inputMode="numeric" value={qty} onChange={(e) => setQty(e.target.value.replace(/[^0-9]/g, ''))} /></label>
+        <label className="ticket-row">
+          <span className="ticket-label">수량</span>
+          <span className="with-suffix"><input inputMode="numeric" value={qty} onChange={(e) => setQty(e.target.value.replace(/[^0-9]/g, ''))} /><span>주</span></span>
+        </label>
         {type !== 'market' && (
           <>
-            <label>
-              가격 <span className="muted small">호가 {tickSize(market, Number(priceText) || last).toLocaleString()}{lim ? ` · 제한 ${lim.low.toLocaleString()}–${lim.high.toLocaleString()}` : ''}</span>
-              <input inputMode="decimal" value={priceText} onChange={(e) => setPrice(e.target.value.replace(/[^0-9.]/g, ''))} />
+            <label className="ticket-row">
+              <span className="ticket-label">가격</span>
+              <span className="with-suffix"><input inputMode="decimal" value={priceText} onChange={(e) => setPrice(e.target.value.replace(/[^0-9.]/g, ''))} /><span>{inst.currency === 'KRW' ? '원' : '$'}</span></span>
             </label>
-            <label>유효 기간(거래일)<input inputMode="numeric" value={validDays} onChange={(e) => setValidDays(e.target.value.replace(/[^0-9]/g, ''))} /></label>
+            <p className="ticket-hint">호가 단위 {tickSize(market, Number(priceText) || last).toLocaleString()}{lim ? `, 오늘 가능한 가격 ${lim.low.toLocaleString()}–${lim.high.toLocaleString()}` : ''}</p>
+            <label className="ticket-row">
+              <span className="ticket-label">유효 기간</span>
+              <span className="with-suffix"><input inputMode="numeric" value={validDays} onChange={(e) => setValidDays(e.target.value.replace(/[^0-9]/g, ''))} /><span>거래일</span></span>
+            </label>
           </>
         )}
-        <label>이유 <span className="muted small">(선택, 나중에 채점과 리뷰에 쓰입니다)</span>
-          <input value={reason} onChange={(e) => setReason(e.target.value)} placeholder="예: 60일선 지지 확인, 실적 발표 전 분할 매수" />
+        <label className="ticket-row">
+          <span className="ticket-label">이유</span>
+          <input value={reason} onChange={(e) => setReason(e.target.value)} placeholder="예: 60일선에서 받치는지 확인" />
         </label>
-        <label>확신
-          <input type="range" min={1} max={5} value={confidence} onChange={(e) => setConfidence(Number(e.target.value))} />
-          <span className="muted small">{['', '거의 없음', '낮음', '보통', '높음', '매우 높음'][confidence]}</span>
-        </label>
-        <div className="est">예상 금액 {money(est, inst.currency)} · 비용 약 {money(cost, inst.currency)}</div>
+        <div className="ticket-row">
+          <span className="ticket-label">확신</span>
+          <div className="seg seg-wide" role="group" aria-label="확신">
+            {[1, 2, 3, 4, 5].map((k) => (
+              <button key={k} type="button" aria-pressed={confidence === k} onClick={() => setConfidence(k)} title={['', '거의 없음', '낮음', '보통', '높음', '매우 높음'][k]}>{k}</button>
+            ))}
+          </div>
+        </div>
+        <dl className="ticket-sum">
+          <div><dt>주문 금액</dt><dd className="num">{money(est, inst.currency)}</dd></div>
+          <div><dt>{side === 'sell' ? '수수료와 세금' : '수수료'}</dt><dd className="num">{money(cost, inst.currency)}</dd></div>
+          <div><dt>{side === 'buy' ? '주문 가능 현금' : '매도 가능'}</dt><dd className="num">{side === 'buy' ? money(cash, inst.currency) : `${held - pending}주`}</dd></div>
+        </dl>
         {errors.length > 0 && <ul className="errors">{errors.map((x) => <li key={x}>{x}</li>)}</ul>}
-        <button className={`primary ${side}`} type="submit" disabled={errors.length > 0}>{side === 'buy' ? '매수 주문' : '매도 주문'}</button>
+        <button className="ticket-submit" type="submit" disabled={errors.length > 0}>{side === 'buy' ? '매수 주문' : '매도 주문'}</button>
         {done && <p className="ok">{done}</p>}
-        <p className="fine">주문은 주문한 날(거래소 시간)의 다음 거래일부터 체결을 판정합니다. 시장가는 그날 시가에 슬리피지 {pct(journal.settings.slippage, 2, false)}를 더해 체결됩니다.</p>
+        <p className="fine">주문한 날(거래소 시간)의 다음 거래일 일봉으로 체결을 정합니다. 시장가는 그날 시가에 슬리피지 {pct(journal.settings.slippage, 2, false)}를 더합니다.</p>
       </form>
-    </Panel>
+    </section>
   );
 }
 
@@ -226,12 +263,12 @@ function ForecastPanel({ inst, b }: { inst: Instrument; b: Bars }) {
   };
 
   return (
-    <Panel title="내 예측" aside={<span className="muted small">{madeAfter} 종가 기준 · 20거래일 뒤</span>}>
+    <Panel title="내 예측" aside={<span>{madeAfter} 종가에서 20거래일 뒤</span>}>
       {already ? (
-        <p>오늘 이미 예측했습니다: 상승 {Math.round(already.pUp * 100)}%, 구간 {pct(already.low)} ~ {pct(already.high)}. <a href={link.forecasts}>성적 보기 →</a></p>
+        <p>오늘 이미 예측했습니다: 상승 {Math.round(already.pUp * 100)}%, 구간 {pct(already.low)} ~ {pct(already.high)}. <a href={link.forecasts}>예측 성적 보기</a></p>
       ) : (
         <form className="order" onSubmit={submit}>
-          <label>오를 확률 <b className="num">{pUp}%</b>
+          <label>오를 확률 <b className="num big-num">{pUp}%</b>
             <input type="range" min={5} max={95} step={5} value={pUp} onChange={(e) => setPUp(Number(e.target.value))} />
           </label>
           <div className="row">
@@ -263,7 +300,7 @@ function HistoryPanel({ id, b, currency, allBars }: { id: string; b: Bars; curre
           const fill = account.fills.find((f) => f.orderId === o.id);
           return (
             <li key={o.id}>
-              {o.side === 'buy' ? '매수' : '매도'} {o.qty}주 {o.type === 'market' ? '시장가' : `${o.type === 'limit' ? '지정가' : '손절'} ${price(o.price, currency)}`} ·{' '}
+              <span className={o.side === 'buy' ? 'up' : 'down'}>{o.side === 'buy' ? '매수' : '매도'}</span> {o.qty}주 {o.type === 'market' ? '시장가' : `${o.type === 'limit' ? '지정가' : '손절'} ${price(o.price, currency)}`}{' '}
               <StatusText status={out?.status} />{fill && ` ${shortDate(fill.date)} @ ${price(fill.price, currency)}`}
               {out?.reason && <span className="muted"> ({out.reason})</span>}
               {o.reason && <div className="muted small">“{o.reason}”</div>}
@@ -274,7 +311,7 @@ function HistoryPanel({ id, b, currency, allBars }: { id: string; b: Bars; curre
           const s = scoreForecast(f, b);
           return (
             <li key={f.id}>
-              예측 {f.madeAfter}: 상승 {Math.round(f.pUp * 100)}% ·{' '}
+              예측 {f.madeAfter}, 오를 확률 {Math.round(f.pUp * 100)}%{' '}
               {s.status === 'scored' ? <>결과 <Chg x={s.ret} /> (Brier {s.brier!.toFixed(3)})</> : <span className="muted">{s.remaining}거래일 남음</span>}
             </li>
           );

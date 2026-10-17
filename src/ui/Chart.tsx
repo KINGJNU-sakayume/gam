@@ -66,13 +66,13 @@ export function Chart(props: ChartProps) {
     g.setTransform(dpr, 0, 0, dpr, 0, 0);
     const root = cv;
     const col = {
-      bg: cssVar(root, '--chart-bg', '#fbf8f1'),
-      grid: cssVar(root, '--chart-grid', '#e8e1d2'),
-      text: cssVar(root, '--ink-soft', '#6b6455'),
-      up: cssVar(root, '--up', '#c8332b'),
-      down: cssVar(root, '--down', '#2457a6'),
-      ink: cssVar(root, '--ink', '#22201b'),
-      guide: cssVar(root, '--accent', '#c8332b'),
+      bg: cssVar(root, '--chart-bg', '#ffffff'),
+      grid: cssVar(root, '--chart-grid', '#edf0f3'),
+      text: cssVar(root, '--ink-3', '#7b8491'),
+      up: cssVar(root, '--up', '#d3202a'),
+      down: cssVar(root, '--down', '#1d5ad6'),
+      ink: cssVar(root, '--ink', '#1c2430'),
+      guide: cssVar(root, '--down', '#1d5ad6'),
     };
     g.fillStyle = col.bg;
     g.fillRect(0, 0, width, height);
@@ -95,7 +95,7 @@ export function Chart(props: ChartProps) {
     const yOf = (p: number) => 6 + ((hi - p) / (hi - lo)) * (priceH - 12);
 
     // grid + price axis
-    g.font = '11px Pretendard, system-ui, sans-serif';
+    g.font = '11px "IBM Plex Sans KR", system-ui, sans-serif';
     g.textBaseline = 'middle';
     const ticks = 5;
     for (let k = 0; k <= ticks; k++) {
@@ -243,6 +243,11 @@ export function Chart(props: ChartProps) {
         {overlays.map((ov) => (
           <span key={ov.label} style={{ color: ov.color }}>{ov.label}</span>
         ))}
+        <span className="chart-zoom">
+          <button type="button" onClick={() => setVisible((x) => Math.max(20, Math.round(x / 1.5)))} aria-label="확대">＋</button>
+          <button type="button" onClick={() => setVisible((x) => Math.min(n, Math.round(x * 1.5)))} aria-label="축소">－</button>
+          <button type="button" onClick={() => { followEnd.current = true; setEnd(n - 1); }}>최신</button>
+        </span>
       </div>
       <canvas
         ref={canvas}
@@ -254,11 +259,6 @@ export function Chart(props: ChartProps) {
         aria-label="가격 차트"
         role="img"
       />
-      <div className="chart-zoom">
-        <button type="button" onClick={() => setVisible((x) => Math.max(20, Math.round(x / 1.5)))} aria-label="확대">＋</button>
-        <button type="button" onClick={() => setVisible((x) => Math.min(n, Math.round(x * 1.5)))} aria-label="축소">－</button>
-        <button type="button" onClick={() => { followEnd.current = true; setEnd(n - 1); }}>최신</button>
-      </div>
     </div>
   );
 }

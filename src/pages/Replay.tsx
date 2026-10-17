@@ -4,7 +4,7 @@ import type { ReplayAction } from '../engine/types';
 import { buyAndHold, createEpisode, episodeFromDate, episodeView, playReplay, REPLAY_CASH, type Episode } from '../replay/replay';
 import { link, useApp, useBars } from '../state';
 import { Chart } from '../ui/Chart';
-import { Chg, Empty, Panel } from '../ui/bits';
+import { Chg, Empty, KV, Panel } from '../ui/bits';
 import { pct, shortDate } from '../ui/format';
 
 interface Game { ep: Episode; actions: ReplayAction[]; step: number; curated?: CuratedReplay; saved: boolean; memo: string }
@@ -62,8 +62,8 @@ export function ReplayPage() {
             {curatedList.map((c) => (
               <li key={c.id}>
                 <button className="link" onClick={() => startCurated(c.id)}>{c.title}</button>
-                {c.level && <span className="chip">{c.level}</span>}
-                {journal.replays.some((r) => r.curated === c.id) && <span className="muted small"> · 해 봄</span>}
+                {c.level && <span className="flag">{c.level}</span>}
+                {journal.replays.some((r) => r.curated === c.id) && <span className="muted small"> 해 봄</span>}
               </li>
             ))}
           </ul>
@@ -72,7 +72,7 @@ export function ReplayPage() {
       <Panel title="지난 기록">
         {journal.replays.length === 0 ? <Empty>아직 끝낸 회차가 없습니다.</Empty> : (
           <div className="table-wrap">
-            <table>
+            <table className="grid">
               <thead><tr><th>날짜</th><th>정체</th><th>기간</th><th className="r">내 수익률</th><th className="r">보유만 했다면</th><th className="r">매매</th><th>메모</th></tr></thead>
               <tbody>
                 {[...journal.replays].reverse().map((r) => (
@@ -126,10 +126,10 @@ function Play({ game, setGame, onSave, bars }: { game: Game; setGame: (g: Game |
   return (
     <div className="page">
       <div className="replay-head">
-        <h1>{curated ? curated.title : '무작위 회차'} <span className="muted">D+{step} / {ep.steps}</span></h1>
+        <h1>{curated ? curated.title : '무작위 회차'} <span className="num replay-step">D+{step}<span>/{ep.steps}</span></span></h1>
         <button className="link" onClick={() => setGame(null)}>그만두기</button>
       </div>
-      <div className="panel chart-panel">
+      <div className="chart-pane">
         <Chart o={view.o} h={view.h} l={view.l} c={view.c} v={view.v} labels={view.labels} format={fmt} guide={view.zero} markers={markers} initialVisible={160} />
       </div>
       <div className="grid-2">
@@ -156,8 +156,8 @@ function Play({ game, setGame, onSave, bars }: { game: Game; setGame: (g: Game |
                   {' '}<button className="link" onClick={() => setGame({ ...game, actions: actions.filter((x) => x !== a) })}>취소</button></p>
               ))}
               <div className="btn-row">
-                <button className="primary" onClick={() => advance(1)}>다음 날 →</button>
-                <button onClick={() => advance(5)}>5일 →</button>
+                <button className="primary" onClick={() => advance(1)}>다음 날</button>
+                <button onClick={() => advance(5)}>5일 넘기기</button>
               </div>
             </>
           )}
@@ -165,7 +165,7 @@ function Play({ game, setGame, onSave, bars }: { game: Game; setGame: (g: Game |
         {curated ? (
           <Panel title="해설">
             {commentary.length === 0 ? <Empty>아직 해설이 없는 구간입니다.</Empty> : commentary.map(([k, text]) => (
-              <div key={k} className="commentary"><span className="chip">D+{k}</span> {text}</div>
+              <div key={k} className="commentary"><span className="step">D+{k}</span> {text}</div>
             ))}
           </Panel>
         ) : (
@@ -177,10 +177,11 @@ function Play({ game, setGame, onSave, bars }: { game: Game; setGame: (g: Game |
 
       {done && (
         <Panel title="정체 공개" className="reveal">
-          <p className="big-reveal">{instruments[ep.sourceId]?.name ?? ep.sourceId} · {b.d[ep.start]} ~ {b.d[ep.start + ep.steps]}</p>
-          <p>내 수익률 <Chg x={equity / REPLAY_CASH - 1} digits={2} /> · 보유만 했다면 <Chg x={bh} digits={2} /> · 매매 {state.trades.length}회 · 최대 낙폭 {pct(state.maxDrawdown)}</p>
+          <p className="big-reveal">{instruments[ep.sourceId]?.name ?? ep.sourceId}</p>
+          <p className="num muted">{b.d[ep.start]} ~ {b.d[ep.start + ep.steps]}</p>
+          <KV items={[['내 수익률', <Chg x={equity / REPLAY_CASH - 1} />], ['보유만 했다면', <Chg x={bh} />], ['매매', `${state.trades.length}회`], ['최대 낙폭', <span className="num">{pct(state.maxDrawdown)}</span>]]} />
           {state.trades.length > 0 && (
-            <p className="small muted">{state.trades.map((t) => `D+${t.step} ${t.side === 'buy' ? '매수' : '매도'}`).join(' · ')} (D0 = {shortDate(b.d[ep.start])})</p>
+            <p className="small muted">{state.trades.map((t) => `D+${t.step} ${t.side === 'buy' ? '매수' : '매도'}`).join(', ')} (D0은 {shortDate(b.d[ep.start])})</p>
           )}
           {curated && (
             <div className="commentary">
