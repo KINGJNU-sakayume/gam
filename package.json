@@ -1,0 +1,28 @@
+{
+  "name": "gam",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "개인 스윙 매매 연습장: 모의 매매, 블라인드 리플레이, 예측 채점, Claude 노트",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs --with-sample --serve",
+    "sample": "cd pipeline && python3 -m gam.run sample",
+    "test": "bun test",
+    "test:pipeline": "cd pipeline && python3 -m unittest discover -s tests",
+    "typecheck": "tsc --noEmit",
+    "check:notes": "node scripts/check-notes.mjs",
+    "check": "npm run typecheck && npm test && npm run test:pipeline && npm run check:notes"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "esbuild": "0.28.2",
+    "tsx": "^4.19.0",
+    "typescript": "6.0.3"
+  }
+}

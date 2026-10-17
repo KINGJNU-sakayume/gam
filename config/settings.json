@@ -1,0 +1,9 @@
+{
+  "history": { "years": 10 },
+  "pattern": { "window": 40, "horizon": 20, "matches": 30, "baseYears": 5, "minHistory": 260 },
+  "ai": {
+    "cadence": "daily",
+    "maxWebResearchPerDay": 3,
+    "forecastHorizon": 20
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "indices": [
+    { "id": "IX:KOSPI", "name": "코스피", "yahoo": "^KS11", "currency": "KRW" },
+    { "id": "IX:KOSDAQ", "name": "코스닥", "yahoo": "^KQ11", "currency": "KRW" },
+    { "id": "IX:SPX", "name": "S&P 500", "yahoo": "^GSPC", "currency": "USD" },
+    { "id": "IX:NDX", "name": "나스닥 종합", "yahoo": "^IXIC", "currency": "USD" },
+    { "id": "FX:USDKRW", "name": "원/달러", "yahoo": "KRW=X", "currency": "KRW" }
+  ],
+  "stocks": [
+    { "id": "KR:005930", "name": "삼성전자", "yahoo": "005930.KS", "market": "KOSPI", "currency": "KRW" },
+    { "id": "KR:000660", "name": "SK하이닉스", "yahoo": "000660.KS", "market": "KOSPI", "currency": "KRW" },
+    { "id": "KR:207940", "name": "삼성바이오로직스", "yahoo": "207940.KS", "market": "KOSPI", "currency": "KRW" },
+    { "id": "KR:012450", "name": "한화에어로스페이스", "yahoo": "012450.KS", "market": "KOSPI", "currency": "KRW" },
+    { "id": "US:NVDA", "name": "엔비디아", "yahoo": "NVDA", "market": "NASDAQ", "currency": "USD" },
+    { "id": "US:META", "name": "메타", "yahoo": "META", "market": "NASDAQ", "currency": "USD" },
+    { "id": "US:TSLA", "name": "테슬라", "yahoo": "TSLA", "market": "NASDAQ", "currency": "USD" },
+    { "id": "US:SPCX", "name": "스페이스X", "yahoo": "SPCX", "market": "NASDAQ", "currency": "USD" },
+    { "id": "US:GOOGL", "name": "알파벳", "yahoo": "GOOGL", "market": "NASDAQ", "currency": "USD" },
+    { "id": "US:AMD", "name": "AMD", "yahoo": "AMD", "market": "NASDAQ", "currency": "USD" },
+    { "id": "US:SPOT", "name": "스포티파이", "yahoo": "SPOT", "market": "NYSE", "currency": "USD" },
+    { "id": "US:PANW", "name": "팔로알토 네트웍스", "yahoo": "PANW", "market": "NASDAQ", "currency": "USD" }
+  ]
+}
