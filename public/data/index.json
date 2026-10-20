@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T00:30:46+00:00",
+ "generatedAt": "2026-10-20T12:42:00+00:00",
  "sample": false,
  "asOf": {
   "KR": "2026-10-20",
@@ -105,7 +105,7 @@
    "market": "NASDAQ",
    "file": "prices/US-NVDA.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "id": "US:META",
@@ -115,7 +115,7 @@
    "market": "NASDAQ",
    "file": "prices/US-META.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "id": "US:TSLA",
@@ -125,7 +125,7 @@
    "market": "NASDAQ",
    "file": "prices/US-TSLA.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "id": "US:SPCX",
@@ -135,7 +135,7 @@
    "market": "NASDAQ",
    "file": "prices/US-SPCX.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "id": "US:GOOGL",
@@ -145,7 +145,7 @@
    "market": "NASDAQ",
    "file": "prices/US-GOOGL.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "id": "US:AMD",
@@ -155,7 +155,7 @@
    "market": "NASDAQ",
    "file": "prices/US-AMD.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "id": "US:SPOT",
@@ -165,7 +165,7 @@
    "market": "NYSE",
    "file": "prices/US-SPOT.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   },
   {
    "id": "US:PANW",
@@ -175,7 +175,7 @@
    "market": "NASDAQ",
    "file": "prices/US-PANW.json",
    "available": true,
-   "asOf": "2026-10-16"
+   "asOf": "2026-10-19"
   }
  ]
 }
