@@ -1,32 +1,32 @@
 {
- "generatedAt": "2026-10-19T14:38:38+00:00",
+ "generatedAt": "2026-10-20T00:30:44+00:00",
  "results": [
   {
    "id": "IX:KOSPI",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
-   "asOf": "2026-10-19"
+   "rows": 2446,
+   "asOf": "2026-10-20"
   },
   {
    "id": "IX:KOSDAQ",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
-   "asOf": "2026-10-19"
+   "rows": 2446,
+   "asOf": "2026-10-20"
   },
   {
    "id": "IX:SPX",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
+   "rows": 2512,
    "asOf": "2026-10-19"
   },
   {
    "id": "IX:NDX",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
+   "rows": 2512,
    "asOf": "2026-10-19"
   },
   {
@@ -34,91 +34,99 @@
    "ok": true,
    "source": "yahoo",
    "rows": 2601,
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "id": "KR:005930",
    "ok": true,
    "source": "yahoo",
    "rows": 2446,
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "id": "KR:000660",
    "ok": true,
    "source": "yahoo",
    "rows": 2446,
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "id": "KR:207940",
    "ok": true,
    "source": "yahoo",
-   "rows": 2429,
-   "asOf": "2026-10-19"
+   "rows": 2430,
+   "asOf": "2026-10-20"
   },
   {
    "id": "KR:012450",
    "ok": true,
    "source": "yahoo",
    "rows": 2446,
-   "asOf": "2026-10-19"
+   "asOf": "2026-10-20"
   },
   {
    "id": "US:NVDA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-10-19"
+   "rows": 2511,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   },
   {
    "id": "US:META",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-10-19"
+   "rows": 2511,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   },
   {
    "id": "US:TSLA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-10-19"
+   "rows": 2511,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   },
   {
    "id": "US:SPCX",
    "ok": true,
    "source": "yahoo",
-   "rows": 89,
-   "asOf": "2026-10-19"
+   "rows": 88,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   },
   {
    "id": "US:GOOGL",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-10-19"
+   "rows": 2511,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   },
   {
    "id": "US:AMD",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-10-19"
+   "rows": 2511,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   },
   {
    "id": "US:SPOT",
    "ok": true,
    "source": "yahoo",
-   "rows": 2149,
-   "asOf": "2026-10-19"
+   "rows": 2148,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   },
   {
    "id": "US:PANW",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-10-19"
+   "rows": 2511,
+   "asOf": "2026-10-16",
+   "droppedTail": "2026-10-19"
   }
  ]
 }
