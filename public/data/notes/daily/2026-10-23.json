@@ -1,0 +1,144 @@
+{
+ "date": "2026-10-23",
+ "written": "2026-10-23T06:55:00+09:00",
+ "model": "claude",
+ "market": "코스피 5,533.77(-3.52%), 코스닥 764.10(-3.62%)로 전날 반등을 거의 되돌렸다. 둘 다 ATR(4.52%, 4.07%) 이내라 플래그는 없지만, 코스피는 20일 -19.73%, 20일선(6,414.62) 아래이고 RSI 30.8로 과매도 경계(30)에 다시 붙었다. 원/달러는 1,324.52원(+0.04%)으로 52주 저점 플래그가 떴다. 미국은 21일 종가 기준 S&P 500 7,757.17(+0.58%), 나스닥 26,702.86(+1.05%)이고 나스닥은 60일선(26,521.15)을 위로 넘었다. 한국 시장의 하락 이유와 21일 장 마감 이후 나온 미국 실적은 아래 종목 노트에서 출처와 함께 적었다. AI 예측은 아직 채점된 것이 없어 보정 조정은 하지 않았고, 12종목 모두 진행 중인 예측이 있어 새 예측은 없다. 시세 수집 실패 종목 없음.",
+ "notes": [
+  {
+   "id": "IX:KOSPI",
+   "changed": false,
+   "text": "플래그 없음(-3.52%, ATR 4.52% 이내). 20·60·120일선 아래, RSI 30.8로 30 경계 근처."
+  },
+  {
+   "id": "IX:KOSDAQ",
+   "changed": false,
+   "text": "플래그 없음(-3.62%, ATR 4.07% 이내). 20·60·120일선 아래."
+  },
+  {
+   "id": "IX:SPX",
+   "changed": false,
+   "text": "특별한 신호 없음(+0.58%). 20·60일선 위로 올라섰고 52주 고점에서 -1.11%."
+  },
+  {
+   "id": "IX:NDX",
+   "changed": true,
+   "text": "21일 +1.05%로 26,702.86에 마감하며 60일선(26,521.15)을 위로 넘었다(플래그). 20일선(26,963.98)은 아직 아래다. 같은 날 스페이스X 실적 뒤 반도체가 지수 상승을 이끌었다는 보도가 있다. 오를 쪽 재료는 60일선 회복, 내릴 쪽 재료는 20일 수익률이 아직 -0.87%라는 점이다. 다시 60일선 아래로 마감하면 이번 돌파는 무효로 볼 신호다.",
+   "sources": [
+    {
+     "title": "Yahoo Finance: Stock market today, Oct 21 (SpaceX surges nearly 8%)",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html"
+    }
+   ]
+  },
+  {
+   "id": "FX:USDKRW",
+   "changed": true,
+   "text": "1,324.52원(+0.04%)으로 52주 저점 플래그가 떴다. 20일 -2.79%, 20·60·120일선 모두 아래이고 RSI 34.0이다. 뚜렷한 뉴스는 확인하지 못함(조사 대상 3종목 밖). 저점 근처에서 RSI가 낮은 것은 반등 재료, 이평선이 모두 위에 있는 것은 하락 추세 재료다. 20일선(1,343.25) 위로 올라서면 하락 추세가 꺾였다고 볼 신호다."
+  },
+  {
+   "id": "KR:005930",
+   "changed": false,
+   "text": "플래그 없음(-4.03%, ATR 6.14% 이내). 20·60·120일선 아래, RSI 35.4."
+  },
+  {
+   "id": "KR:000660",
+   "changed": true,
+   "text": "1,223,000원(-5.49%)으로 RSI 28.6 과매도 플래그가 다시 떴고 20일 수익률은 -34.14%다. 거래대금은 약 2조9,882억원으로 컸다. 인포스탁데일리는 미국 실적 뒤 AI 투자 의구심과 전날 끝난 자사주 매입을 약세 배경으로 들었으나, 자사주 매입 종료는 한 곳에서만 확인돼 '확인되지 않음'으로 둔다. 과매도와 52주 고점 대비 -59%는 반등 재료, 20·60일선과의 큰 격차와 코스피 전체의 기관 3일 연속 순매도는 하락 재료다. 진행 중인 AI 예측(상승 확률 0.50)은 그대로이며, 직전 저점 아래로 더 밀리면서 RSI가 낮아지면 반등 시나리오가 틀렸다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "서울신문: SK하이닉스 5.49% 하락… 거래대금 2조 9882억원",
+     "url": "https://www.seoul.co.kr/news/economy/securities/2026/10/22/20261022500213"
+    },
+    {
+     "title": "인포스탁데일리(인베스팅닷컴): [1022마감체크] 코스피 3% 넘게 급락",
+     "url": "https://kr.investing.com/news/stock-market-news/article-2136715"
+    }
+   ]
+  },
+  {
+   "id": "KR:207940",
+   "changed": false,
+   "text": "플래그 없음(-3.95%, ATR 4.57% 이내). 20일선 위, 60일선 아래."
+  },
+  {
+   "id": "KR:012450",
+   "changed": false,
+   "text": "특별한 신호 없음(-0.37%). 20·60·120일선 아래."
+  },
+  {
+   "id": "US:NVDA",
+   "changed": true,
+   "text": "221.97달러(+2.54%)로 60일선(220.74)을 위로 넘었다(플래그). Invezz는 GTC 베를린에서 공개한 데이터센터 레퍼런스 설계와 업종 반등을 이유로 들었고, 중국 빅테크의 대량 주문 보도는 한 곳뿐이라 확인되지 않음. 오를 쪽 재료는 60일선 회복, 내릴 쪽 재료는 20일선(226.87) 아래와 21일 장 마감 이후 나온 AI 투자 의구심 보도다. 진행 중인 AI 예측(상승 확률 0.60)은 그대로이며, 60일선 아래로 다시 마감하면 돌파 시나리오가 틀렸다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "Invezz: Why Nvidia stock is rising on Wednesday",
+     "url": "https://invezz.com/news/2026/10/21/why-nvidia-stock-is-rising-on-wednesday/"
+    },
+    {
+     "title": "Yahoo Finance: Stock market today, Oct 21 (SpaceX surges nearly 8%)",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html"
+    },
+    {
+     "title": "인포스탁데일리(인베스팅닷컴): [1022마감체크] 코스피 3% 넘게 급락",
+     "url": "https://kr.investing.com/news/stock-market-news/article-2136715"
+    }
+   ]
+  },
+  {
+   "id": "US:META",
+   "changed": false,
+   "text": "특별한 신호 없음(+0.47%). 20일선 아래, 60일선 위. 21일 장 마감 뒤 실적 발표가 있었다는 보도가 있으나 카드에는 아직 반영되지 않았다."
+  },
+  {
+   "id": "US:TSLA",
+   "changed": true,
+   "text": "386.47달러(+3.41%)로 일간 변동이 ATR(3.21%)을 넘었다. Yahoo Finance는 스페이스X 실적과 합병 검토 소식이 테슬라 상승으로 이어졌다고 보도했다. 같은 날 장 마감 뒤 실적을 발표했고 시간외에서 약 4% 내렸다는 보도가 있어, 카드의 상승은 실적 반응 전 숫자다. 20·60일선 위는 오를 쪽, 실적 뒤 시간외 하락은 내릴 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.50)은 그대로이며, 20일선(370.03) 아래로 마감하면 상승 흐름이 꺾였다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "Yahoo Finance: Stock market today, Oct 21 (SpaceX surges nearly 8%)",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html"
+    },
+    {
+     "title": "인포스탁데일리(인베스팅닷컴): [1022마감체크] 코스피 3% 넘게 급락",
+     "url": "https://kr.investing.com/news/stock-market-news/article-2136715"
+    }
+   ]
+  },
+  {
+   "id": "US:SPCX",
+   "changed": true,
+   "text": "159.31달러(+7.79%), 거래량 20일 평균의 2.59배로 거래량 급증 플래그가 떴다. 분기 매출·이익이 예상을 넘었고, 머스크가 스페이스X와 테슬라가 합병 검토 특별위원회를 각각 만들었다고 말했다는 보도가 두 곳에 있다. 실적 확인과 20·60일선 위 위치는 오를 쪽, 합병은 검토 단계일 뿐이고 상장 기간이 짧아 유사 패턴 표본이 없다는 점은 불확실성 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.55)은 그대로이며, 실적 전 가격대인 20일선(155.24) 아래로 되돌아가면 실적 반응이 사라졌다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "Yahoo Finance: Stock market today, Oct 21 (SpaceX surges nearly 8%)",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html"
+    },
+    {
+     "title": "CNBC: SpaceX stock jumps after earnings beat and Musk hints at Tesla tie-up",
+     "url": "https://www.cnbc.com/2026/10/21/spacex-spcx-stock-musk-merger-tesla.html"
+    }
+   ]
+  },
+  {
+   "id": "US:GOOGL",
+   "changed": false,
+   "text": "특별한 신호 없음(-1.62%). 20·60일선 아래."
+  },
+  {
+   "id": "US:AMD",
+   "changed": false,
+   "text": "특별한 신호 없음(+3.36%, ATR 4.80% 이내). 20일선 아래, 60일선 위."
+  },
+  {
+   "id": "US:SPOT",
+   "changed": false,
+   "text": "특별한 신호 없음(-0.14%). 20·60일선 위 유지."
+  },
+  {
+   "id": "US:PANW",
+   "changed": false,
+   "text": "특별한 신호 없음(+2.05%). 20·60일선 아래."
+  }
+ ],
+ "forecasts": []
+}
