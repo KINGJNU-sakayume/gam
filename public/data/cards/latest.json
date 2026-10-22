@@ -1,75 +1,77 @@
 {
  "asOf": {
   "KR": "2026-10-21",
-  "US": "2026-10-20",
-  "FX": "2026-10-21"
+  "US": "2026-10-21",
+  "FX": "2026-10-22"
  },
- "generatedAt": "2026-10-21T12:54:59+00:00",
+ "generatedAt": "2026-10-22T00:06:31+00:00",
  "sample": false,
  "cards": [
   {
    "id": "IX:KOSPI",
-   "date": "2026-10-21",
-   "close": 5735.6602,
-   "chg1d": 0.0329,
-   "chg5d": -0.0455,
-   "chg20d": -0.1459,
+   "date": "2026-10-20",
+   "close": 5552.7402,
+   "chg1d": -0.0373,
+   "chg5d": -0.08,
+   "chg20d": -0.1734,
    "sma": {
-    "20": 6482.6381,
-    "60": 6584.8094,
-    "120": 7172.6213
+    "20": 6531.6256,
+    "60": 6602.5101,
+    "120": 7178.3069
    },
-   "rsi14": 33.9,
-   "atrPct": 0.0436,
-   "volRatio20": 0.78,
-   "from52wHigh": -0.3889,
-   "from52wLow": 0.6283,
+   "rsi14": 27.8,
+   "atrPct": 0.0448,
+   "volRatio20": 0.96,
+   "from52wHigh": -0.4084,
+   "from52wLow": 0.581,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.4667,
-    "median": -0.0212,
-    "p10": -0.1526,
-    "p90": 0.1398
+    "upShare": 0.5333,
+    "median": 0.0116,
+    "p10": -0.158,
+    "p90": 0.1794
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
     "upShare": 0.5437,
     "median": 0.0061,
-    "p10": -0.0626,
+    "p10": -0.0625,
     "p90": 0.1046
    },
-   "flags": [],
-   "history": 2447,
+   "flags": [
+    "rsi-oversold"
+   ],
+   "history": 2445,
    "kind": "index"
   },
   {
    "id": "IX:KOSDAQ",
-   "date": "2026-10-21",
-   "close": 792.76,
-   "chg1d": 0.0138,
-   "chg5d": -0.0378,
-   "chg20d": -0.0358,
+   "date": "2026-10-20",
+   "close": 781.97,
+   "chg1d": -0.0333,
+   "chg5d": -0.0658,
+   "chg20d": -0.0417,
    "sma": {
-    "20": 842.103,
-    "60": 816.356,
-    "120": 912.7739
+    "20": 843.574,
+    "60": 815.6615,
+    "120": 916.0103
    },
-   "rsi14": 42.4,
-   "atrPct": 0.0392,
-   "volRatio20": 1.0,
-   "from52wHigh": -0.3552,
-   "from52wLow": 0.2564,
+   "rsi14": 40.0,
+   "atrPct": 0.0406,
+   "volRatio20": 0.84,
+   "from52wHigh": -0.364,
+   "from52wLow": 0.2393,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.4333,
-    "median": -0.0294,
-    "p10": -0.192,
-    "p90": 0.1173
+    "upShare": 0.3667,
+    "median": -0.0272,
+    "p10": -0.1554,
+    "p90": 0.1922
    },
    "baseRate": {
     "horizon": 20,
@@ -80,39 +82,39 @@
     "p90": 0.0821
    },
    "flags": [],
-   "history": 2447,
+   "history": 2445,
    "kind": "index"
   },
   {
    "id": "IX:SPX",
-   "date": "2026-10-20",
-   "close": 7712.5698,
-   "chg1d": 0.0028,
-   "chg5d": -0.0119,
-   "chg20d": -0.0067,
+   "date": "2026-10-21",
+   "close": 7757.1699,
+   "chg1d": 0.0058,
+   "chg5d": 0.005,
+   "chg20d": 0.0066,
    "sma": {
-    "20": 7732.9395,
-    "60": 7686.1154,
-    "120": 7566.6236
+    "20": 7735.4965,
+    "60": 7691.5885,
+    "120": 7571.1916
    },
-   "rsi14": 49.4,
-   "atrPct": 0.0092,
-   "volRatio20": 0.97,
-   "from52wHigh": -0.0168,
-   "from52wLow": 0.2209,
+   "rsi14": 53.6,
+   "atrPct": 0.0091,
+   "volRatio20": 0.56,
+   "from52wHigh": -0.0111,
+   "from52wLow": 0.228,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.5,
-    "median": 0.0006,
-    "p10": -0.024,
-    "p90": 0.023
+    "upShare": 0.4,
+    "median": -0.01,
+    "p10": -0.0382,
+    "p90": 0.0248
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
-    "upShare": 0.6429,
+    "upShare": 0.6437,
     "median": 0.0157,
     "p10": -0.0487,
     "p90": 0.0569
@@ -123,29 +125,29 @@
   },
   {
    "id": "IX:NDX",
-   "date": "2026-10-20",
-   "close": 26424.8203,
-   "chg1d": -0.0002,
-   "chg5d": -0.0287,
-   "chg20d": -0.0301,
+   "date": "2026-10-21",
+   "close": 26702.8574,
+   "chg1d": 0.0105,
+   "chg5d": 0.0004,
+   "chg20d": -0.0087,
    "sma": {
-    "20": 26975.6394,
-    "60": 26490.7154,
-    "120": 26241.0633
+    "20": 26963.9803,
+    "60": 26521.1478,
+    "120": 26256.1512
    },
-   "rsi14": 43.2,
-   "atrPct": 0.0138,
-   "volRatio20": 0.96,
-   "from52wHigh": -0.0468,
-   "from52wLow": 0.2772,
+   "rsi14": 48.6,
+   "atrPct": 0.0137,
+   "volRatio20": 0.87,
+   "from52wHigh": -0.0368,
+   "from52wLow": 0.2906,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.7,
-    "median": 0.0197,
-    "p10": -0.0547,
-    "p90": 0.0544
+    "upShare": 0.6667,
+    "median": 0.0079,
+    "p10": -0.0558,
+    "p90": 0.0515
    },
    "baseRate": {
     "horizon": 20,
@@ -155,40 +157,42 @@
     "p10": -0.0649,
     "p90": 0.0772
    },
-   "flags": [],
+   "flags": [
+    "cross-sma60-up"
+   ],
    "history": 2512,
    "kind": "index"
   },
   {
    "id": "FX:USDKRW",
-   "date": "2026-10-21",
-   "close": 1326.09,
-   "chg1d": -0.0029,
-   "chg5d": -0.0106,
-   "chg20d": -0.018,
+   "date": "2026-10-22",
+   "close": 1327.86,
+   "chg1d": 0.003,
+   "chg5d": -0.0086,
+   "chg20d": -0.0254,
    "sma": {
-    "20": 1345.254,
-    "60": 1372.8885,
-    "120": 1439.8558
+    "20": 1343.4145,
+    "60": 1370.9457,
+    "120": 1438.8663
    },
-   "rsi14": 34.4,
-   "atrPct": 0.0107,
+   "rsi14": 36.8,
+   "atrPct": 0.0102,
    "volRatio20": null,
-   "from52wHigh": -0.1648,
-   "from52wLow": 0.0028,
+   "from52wHigh": -0.1637,
+   "from52wLow": 0.0046,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
     "upShare": 0.6667,
-    "median": 0.0064,
-    "p10": -0.0201,
-    "p90": 0.0418
+    "median": 0.0082,
+    "p10": -0.0162,
+    "p90": 0.0311
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
-    "upShare": 0.5722,
+    "upShare": 0.5714,
     "median": 0.0035,
     "p10": -0.0338,
     "p90": 0.0333
@@ -211,7 +215,7 @@
    },
    "rsi14": 38.5,
    "atrPct": 0.0587,
-   "volRatio20": 1.02,
+   "volRatio20": 0.93,
    "from52wHigh": -0.4025,
    "from52wLow": 1.4978,
    "pattern": {
@@ -232,7 +236,7 @@
     "p90": 0.1532
    },
    "flags": [],
-   "history": 2446,
+   "history": 2445,
    "kind": "stock"
   },
   {
@@ -249,7 +253,7 @@
    },
    "rsi14": 31.4,
    "atrPct": 0.0735,
-   "volRatio20": 1.31,
+   "volRatio20": 1.23,
    "from52wHigh": -0.5667,
    "from52wLow": 2.2204,
    "pattern": {
@@ -270,7 +274,7 @@
     "p90": 0.2498
    },
    "flags": [],
-   "history": 2446,
+   "history": 2445,
    "kind": "stock"
   },
   {
@@ -287,7 +291,7 @@
    },
    "rsi14": 56.3,
    "atrPct": 0.0439,
-   "volRatio20": 1.79,
+   "volRatio20": 1.72,
    "from52wHigh": -0.2869,
    "from52wLow": 0.2322,
    "pattern": {
@@ -325,7 +329,7 @@
    },
    "rsi14": 34.8,
    "atrPct": 0.072,
-   "volRatio20": 1.11,
+   "volRatio20": 1.03,
    "from52wHigh": -0.5082,
    "from52wLow": 0.0396,
    "pattern": {
@@ -346,7 +350,7 @@
     "p90": 0.2626
    },
    "flags": [],
-   "history": 2446,
+   "history": 2445,
    "kind": "stock"
   },
   {
@@ -384,7 +388,7 @@
     "p90": 0.2567
    },
    "flags": [],
-   "history": 2512,
+   "history": 2511,
    "kind": "stock"
   },
   {
@@ -401,7 +405,7 @@
    },
    "rsi14": 46.4,
    "atrPct": 0.0354,
-   "volRatio20": 0.84,
+   "volRatio20": 0.85,
    "from52wHigh": -0.1097,
    "from52wLow": 0.3367,
    "pattern": {
@@ -422,7 +426,7 @@
     "p90": 0.1639
    },
    "flags": [],
-   "history": 2512,
+   "history": 2511,
    "kind": "stock"
   },
   {
@@ -439,7 +443,7 @@
    },
    "rsi14": 53.7,
    "atrPct": 0.0327,
-   "volRatio20": 0.92,
+   "volRatio20": 0.93,
    "from52wHigh": -0.2508,
    "from52wLow": 0.2567,
    "pattern": {
@@ -460,7 +464,7 @@
     "p90": 0.2735
    },
    "flags": [],
-   "history": 2512,
+   "history": 2511,
    "kind": "stock"
   },
   {
@@ -477,7 +481,7 @@
    },
    "rsi14": 45.1,
    "atrPct": 0.0464,
-   "volRatio20": 1.33,
+   "volRatio20": 1.44,
    "from52wHigh": -0.345,
    "from52wLow": 0.4098,
    "pattern": null,
@@ -528,7 +532,7 @@
     "p90": 0.1258
    },
    "flags": [],
-   "history": 2512,
+   "history": 2511,
    "kind": "stock"
   },
   {
@@ -545,7 +549,7 @@
    },
    "rsi14": 39.8,
    "atrPct": 0.0503,
-   "volRatio20": 0.75,
+   "volRatio20": 0.76,
    "from52wHigh": -0.188,
    "from52wLow": 1.841,
    "pattern": {
@@ -566,7 +570,7 @@
     "p90": 0.2764
    },
    "flags": [],
-   "history": 2512,
+   "history": 2511,
    "kind": "stock"
   },
   {
@@ -642,7 +646,7 @@
     "p90": 0.1743
    },
    "flags": [],
-   "history": 2512,
+   "history": 2511,
    "kind": "stock"
   }
  ]
