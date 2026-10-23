@@ -1,75 +1,75 @@
 {
  "asOf": {
   "KR": "2026-10-22",
-  "US": "2026-10-21",
-  "FX": "2026-10-22"
+  "US": "2026-10-22",
+  "FX": "2026-10-23"
  },
- "generatedAt": "2026-10-22T12:56:47+00:00",
+ "generatedAt": "2026-10-23T00:04:37+00:00",
  "sample": false,
  "cards": [
   {
    "id": "IX:KOSPI",
-   "date": "2026-10-22",
-   "close": 5533.77,
-   "chg1d": -0.0352,
-   "chg5d": -0.0037,
-   "chg20d": -0.1973,
+   "date": "2026-10-21",
+   "close": 5735.6602,
+   "chg1d": 0.0329,
+   "chg5d": -0.0455,
+   "chg20d": -0.1459,
    "sma": {
-    "20": 6414.6151,
-    "60": 6558.7574,
-    "120": 7164.771
+    "20": 6482.6381,
+    "60": 6584.8094,
+    "120": 7172.6213
    },
-   "rsi14": 30.8,
-   "atrPct": 0.0452,
-   "volRatio20": 0.75,
-   "from52wHigh": -0.4104,
-   "from52wLow": 0.571,
+   "rsi14": 33.9,
+   "atrPct": 0.0436,
+   "volRatio20": 0.78,
+   "from52wHigh": -0.3889,
+   "from52wLow": 0.6283,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
     "upShare": 0.4667,
-    "median": -0.0211,
-    "p10": -0.1515,
-    "p90": 0.1458
+    "median": -0.0212,
+    "p10": -0.1526,
+    "p90": 0.1398
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
     "upShare": 0.5437,
     "median": 0.0061,
-    "p10": -0.0627,
+    "p10": -0.0626,
     "p90": 0.1046
    },
    "flags": [],
-   "history": 2447,
+   "history": 2446,
    "kind": "index"
   },
   {
    "id": "IX:KOSDAQ",
-   "date": "2026-10-22",
-   "close": 764.1,
-   "chg1d": -0.0362,
-   "chg5d": 0.0043,
-   "chg20d": -0.0762,
+   "date": "2026-10-21",
+   "close": 792.76,
+   "chg1d": 0.0138,
+   "chg5d": -0.0378,
+   "chg20d": -0.0358,
    "sma": {
-    "20": 838.952,
-    "60": 815.9197,
-    "120": 909.3555
+    "20": 842.103,
+    "60": 816.356,
+    "120": 912.7739
    },
-   "rsi14": 38.0,
-   "atrPct": 0.0407,
-   "volRatio20": 0.95,
-   "from52wHigh": -0.3785,
-   "from52wLow": 0.211,
+   "rsi14": 42.4,
+   "atrPct": 0.0392,
+   "volRatio20": 1.0,
+   "from52wHigh": -0.3552,
+   "from52wLow": 0.2564,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.5,
-    "median": -0.0034,
-    "p10": -0.1637,
-    "p90": 0.1216
+    "upShare": 0.4333,
+    "median": -0.0294,
+    "p10": -0.192,
+    "p90": 0.1173
    },
    "baseRate": {
     "horizon": 20,
@@ -80,34 +80,34 @@
     "p90": 0.0821
    },
    "flags": [],
-   "history": 2447,
+   "history": 2446,
    "kind": "index"
   },
   {
    "id": "IX:SPX",
-   "date": "2026-10-21",
-   "close": 7757.1699,
-   "chg1d": 0.0058,
-   "chg5d": 0.005,
-   "chg20d": 0.0066,
+   "date": "2026-10-22",
+   "close": 7663.4302,
+   "chg1d": -0.0121,
+   "chg5d": -0.0104,
+   "chg20d": -0.0053,
    "sma": {
-    "20": 7735.4965,
-    "60": 7691.5885,
-    "120": 7571.1916
+    "20": 7733.4615,
+    "60": 7697.3765,
+    "120": 7574.8025
    },
-   "rsi14": 53.6,
-   "atrPct": 0.0091,
-   "volRatio20": 0.95,
-   "from52wHigh": -0.0111,
-   "from52wLow": 0.228,
+   "rsi14": 45.2,
+   "atrPct": 0.0096,
+   "volRatio20": 0.69,
+   "from52wHigh": -0.0231,
+   "from52wLow": 0.2132,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
     "upShare": 0.4,
-    "median": -0.01,
-    "p10": -0.0382,
-    "p90": 0.0248
+    "median": -0.0087,
+    "p10": -0.0409,
+    "p90": 0.0332
    },
    "baseRate": {
     "horizon": 20,
@@ -117,35 +117,37 @@
     "p10": -0.0487,
     "p90": 0.0569
    },
-   "flags": [],
-   "history": 2512,
+   "flags": [
+    "cross-sma60-down"
+   ],
+   "history": 2513,
    "kind": "index"
   },
   {
    "id": "IX:NDX",
-   "date": "2026-10-21",
-   "close": 26702.8594,
-   "chg1d": 0.0105,
-   "chg5d": 0.0004,
-   "chg20d": -0.0087,
+   "date": "2026-10-22",
+   "close": 26008.8594,
+   "chg1d": -0.026,
+   "chg5d": -0.0264,
+   "chg20d": -0.0345,
    "sma": {
-    "20": 26963.9804,
-    "60": 26521.1479,
-    "120": 26256.1512
+    "20": 26917.4549,
+    "60": 26547.2465,
+    "120": 26263.6047
    },
-   "rsi14": 48.6,
-   "atrPct": 0.0137,
+   "rsi14": 38.7,
+   "atrPct": 0.0152,
    "volRatio20": 0.99,
-   "from52wHigh": -0.0368,
-   "from52wLow": 0.2906,
+   "from52wHigh": -0.0618,
+   "from52wLow": 0.2571,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
     "upShare": 0.6667,
-    "median": 0.0079,
-    "p10": -0.0558,
-    "p90": 0.0515
+    "median": 0.0235,
+    "p10": -0.0528,
+    "p90": 0.0803
    },
    "baseRate": {
     "horizon": 20,
@@ -156,49 +158,47 @@
     "p90": 0.0772
    },
    "flags": [
-    "cross-sma60-up"
+    "cross-sma60-down"
    ],
-   "history": 2512,
+   "history": 2513,
    "kind": "index"
   },
   {
    "id": "FX:USDKRW",
-   "date": "2026-10-22",
-   "close": 1324.52,
-   "chg1d": 0.0004,
-   "chg5d": -0.0111,
-   "chg20d": -0.0279,
+   "date": "2026-10-23",
+   "close": 1324.98,
+   "chg1d": -0.0005,
+   "chg5d": -0.0119,
+   "chg20d": -0.031,
    "sma": {
-    "20": 1343.2475,
-    "60": 1370.89,
-    "120": 1438.8384
+    "20": 1341.182,
+    "60": 1369.3142,
+    "120": 1437.7656
    },
-   "rsi14": 34.0,
-   "atrPct": 0.0104,
+   "rsi14": 34.6,
+   "atrPct": 0.0098,
    "volRatio20": null,
-   "from52wHigh": -0.1658,
-   "from52wLow": 0.0036,
+   "from52wHigh": -0.1655,
+   "from52wLow": 0.0041,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
     "upShare": 0.7,
-    "median": 0.0096,
-    "p10": -0.0147,
-    "p90": 0.0405
+    "median": 0.0073,
+    "p10": -0.0183,
+    "p90": 0.0293
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
-    "upShare": 0.5714,
+    "upShare": 0.5706,
     "median": 0.0035,
     "p10": -0.0338,
     "p90": 0.0333
    },
-   "flags": [
-    "new-52w-low"
-   ],
-   "history": 2601,
+   "flags": [],
+   "history": 2602,
    "kind": "index"
   },
   {
@@ -214,8 +214,8 @@
     "120": 273280.2198
    },
    "rsi14": 35.4,
-   "atrPct": 0.0614,
-   "volRatio20": 0.66,
+   "atrPct": 0.0615,
+   "volRatio20": 0.61,
    "from52wHigh": -0.4266,
    "from52wLow": 1.3972,
    "pattern": {
@@ -253,7 +253,7 @@
    },
    "rsi14": 28.6,
    "atrPct": 0.0776,
-   "volRatio20": 0.86,
+   "volRatio20": 0.81,
    "from52wHigh": -0.5905,
    "from52wLow": 2.0437,
    "pattern": {
@@ -293,7 +293,7 @@
    },
    "rsi14": 50.3,
    "atrPct": 0.0457,
-   "volRatio20": 1.13,
+   "volRatio20": 1.05,
    "from52wHigh": -0.315,
    "from52wLow": 0.1835,
    "pattern": {
@@ -330,8 +330,8 @@
     "120": 1082566.6667
    },
    "rsi14": 34.6,
-   "atrPct": 0.0712,
-   "volRatio20": 0.74,
+   "atrPct": 0.0713,
+   "volRatio20": 0.68,
    "from52wHigh": -0.51,
    "from52wLow": 0.0358,
    "pattern": {
@@ -409,7 +409,7 @@
    },
    "rsi14": 47.4,
    "atrPct": 0.0351,
-   "volRatio20": 1.46,
+   "volRatio20": 1.49,
    "from52wHigh": -0.1055,
    "from52wLow": 0.343,
    "pattern": {
@@ -447,7 +447,7 @@
    },
    "rsi14": 59.8,
    "atrPct": 0.0321,
-   "volRatio20": 1.37,
+   "volRatio20": 1.41,
    "from52wHigh": -0.2252,
    "from52wLow": 0.2996,
    "pattern": {
@@ -485,7 +485,7 @@
    },
    "rsi14": 55.8,
    "atrPct": 0.0482,
-   "volRatio20": 2.59,
+   "volRatio20": 2.61,
    "from52wHigh": -0.294,
    "from52wLow": 0.5197,
    "pattern": null,
@@ -555,7 +555,7 @@
    },
    "rsi14": 45.1,
    "atrPct": 0.048,
-   "volRatio20": 0.92,
+   "volRatio20": 0.93,
    "from52wHigh": -0.1607,
    "from52wLow": 1.9366,
    "pattern": {
