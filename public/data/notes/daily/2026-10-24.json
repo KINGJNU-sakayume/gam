@@ -1,0 +1,160 @@
+{
+ "date": "2026-10-24",
+ "written": "2026-10-24T06:55:00+09:00",
+ "model": "claude",
+ "market": "코스피 5,550.30(+0.30%)으로 하루 쉬었고 코스닥은 751.69(-1.62%)로 5일 -5.42%다. 둘 다 플래그는 없고 20·60·120일선 아래이며, 코스피 RSI는 31.3이다. 원/달러는 1,324.43원(-0.09%). 미국은 22일 S&P 500 7,663.43(-1.21%), 나스닥100 26,008.86(-2.60%)로 둘 다 60일선 아래로 내려갔고, 나스닥100은 전날의 60일선 돌파를 하루 만에 되돌렸다. 램리서치의 공급 제약 경고 뒤 반도체주 약세와 메타 실적 뒤 AI 투자 부담 우려가 겹쳤다는 보도가 있다(출처는 종목 노트). AI 예측은 아직 채점된 것이 없어 보정 조정은 하지 않았고, 12종목 모두 진행 중인 예측이 있어 새 예측은 없다. 시세 수집 실패 종목 없음.",
+ "notes": [
+  {
+   "id": "IX:KOSPI",
+   "changed": false,
+   "text": "플래그 없음(+0.30%, ATR 4.50% 이내). 20·60·120일선 아래, RSI 31.3."
+  },
+  {
+   "id": "IX:KOSDAQ",
+   "changed": false,
+   "text": "플래그 없음(-1.62%, ATR 4.14% 이내). 20·60·120일선 아래, 5일 -5.42%."
+  },
+  {
+   "id": "IX:SPX",
+   "changed": true,
+   "text": "22일 -1.21%로 7,663.43에 마감하며 60일선(7,697.38)을 아래로 내려갔다(플래그). 하루 만에 20·60일선 위 위치를 잃었지만 52주 고점 대비로는 -2.31%다. Motley Fool은 메타의 대규모 설비투자가 AI 관련 심리를 눌렀다고 썼다. 120일선(7,574.80) 위라는 점은 버팀 재료, 거래량 20일 평균의 1.16배 속 60일선 이탈은 약세 재료다. 60일선 위로 곧바로 되돌아오면 이번 이탈은 일시적이었다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "Motley Fool: Why SpaceX Stock Dropped on Thursday (Oct 22)",
+     "url": "https://www.fool.com/investing/2026/10/22/why-spacex-stock-dropped-on-thursday/"
+    }
+   ]
+  },
+  {
+   "id": "IX:NDX",
+   "changed": true,
+   "text": "22일 -2.60%로 26,008.86에 마감해 전날 넘었던 60일선(26,547.25)을 다시 내줬다(플래그). 일간 변동은 ATR(1.52%)보다 컸다. 같은 날 램리서치의 공급 제약 경고로 반도체주가 크게 내렸고(필라델피아 반도체지수 -6.72%, TIKR), 메타 실적 뒤 AI 투자 부담 우려도 겹쳤다는 보도가 있다. 유사 패턴 30개 중 66.7%가 20일 뒤 올랐다(기저율 61.9%, 표본 1,260)는 점은 반등 쪽, 20·60일선 모두 아래인 점은 하락 쪽 재료다. 120일선(26,263.60) 아래 마감이 이어지면 추세가 더 약해졌다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "24/7 Wall St.: Chip Stocks Fall as Supply Warning Deepens AI Selloff (Oct 22)",
+     "url": "https://247wallst.com/investing/2026/10/22/chip-stocks-fall-as-supply-warning-deepens-ai-selloff-marvell-and-amd-sink-8-intel-drops-7/"
+    },
+    {
+     "title": "TIKR: AMD Stock Fell 8% in a Day as Lam Research's Supply Warning Sank Chip Stocks",
+     "url": "https://www.tikr.com/blog/amd-stock-fell-8-in-a-day-as-lam-researchs-supply-warning-sank-chip-stocks-heres-where-the-stock-could-go-by-2030"
+    },
+    {
+     "title": "Motley Fool: Why SpaceX Stock Dropped on Thursday (Oct 22)",
+     "url": "https://www.fool.com/investing/2026/10/22/why-spacex-stock-dropped-on-thursday/"
+    }
+   ]
+  },
+  {
+   "id": "FX:USDKRW",
+   "changed": false,
+   "text": "플래그 없음(-0.09%). 20·60일선 아래, RSI 34.3."
+  },
+  {
+   "id": "KR:005930",
+   "changed": false,
+   "text": "플래그 없음(+0.47%, ATR 6.08% 이내). 20·60일선 아래, 5일 수익률 0%."
+  },
+  {
+   "id": "KR:000660",
+   "changed": false,
+   "text": "플래그 없음(+4.42%, ATR 7.54% 이내). RSI 33.4로 과매도 플래그는 풀렸고 20·60일선 아래."
+  },
+  {
+   "id": "KR:207940",
+   "changed": true,
+   "text": "1,466,000원(+7.71%), 거래량 20일 평균의 1.61배로 60일선(1,444,644원)을 위로 넘었다(플래그). 5일 수익률은 +12.94%다. 뚜렷한 뉴스는 확인하지 못함(조사 대상 3종목 밖). 유사 패턴 30개 중 63.3% 상승(기저율 46.8%, 표본 1,260)과 60일선 회복은 오를 쪽, 5일 만에 13% 가까이 오른 뒤라는 점과 하락 쪽에 기운 기저율은 내릴 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.49)은 그대로이며, 60일선 아래로 다시 마감하면 돌파가 무효라고 볼 신호다."
+  },
+  {
+   "id": "KR:012450",
+   "changed": true,
+   "text": "792,000원(-2.34%)으로 52주 신저가 플래그가 떴다. 5일 -10.81%, 20일 -25.77%이고 RSI 33.1이다. 뚜렷한 뉴스는 확인하지 못함(조사 대상 3종목 밖). 유사 패턴 30개 중 70% 상승(기저율 61.1%, 표본 1,260)은 반등 쪽, 20·60일선(924,950원, 1,015,300원)과의 큰 격차와 신저가 갱신은 하락 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.60)은 그대로이며, 신저가가 며칠 더 이어지면 반등 시나리오가 틀렸다고 볼 신호다."
+  },
+  {
+   "id": "US:NVDA",
+   "changed": true,
+   "text": "212.21달러(-4.40%)로 전날 넘었던 60일선(221.12)을 다시 내줬다(플래그). 같은 날 램리서치의 공급 제약 경고로 반도체주 전반이 내렸다는 보도가 있다. 기저율(20일 상승 비율 62.5%, 표본 1,260)은 오를 쪽, 20·60일선 모두 아래로 돌아간 점은 내릴 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.60)은 이틀 만에 돌파 근거가 사라져 불리해졌으며, 60일선 위로 다시 올라서면 이탈이 일시적이었다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "TIKR: AMD Stock Fell 8% in a Day as Lam Research's Supply Warning Sank Chip Stocks",
+     "url": "https://www.tikr.com/blog/amd-stock-fell-8-in-a-day-as-lam-researchs-supply-warning-sank-chip-stocks-heres-where-the-stock-could-go-by-2030"
+    }
+   ]
+  },
+  {
+   "id": "US:META",
+   "changed": true,
+   "text": "648.85달러(-6.98%), 거래량 20일 평균의 2.07배로 거래량 급증과 60일선(649.06) 하향 플래그가 함께 떴다. TIKR과 Motley Fool은 이 하락이 3분기 실적 다음 날이었고 큰 설비투자와 마이너스 잉여현금흐름이 부담으로 읽혔다고 썼다(세부 실적 숫자는 조사하지 않음). 유사 패턴 30개 중 73.3% 상승(기저율 56.4%, 표본 1,260)은 반등 쪽, 5일 -11.93%와 실적 뒤 거래량을 실은 이탈은 하락 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.54)은 그대로이며, 60일선 아래에서 거래가 이어지면 하락 쪽 시나리오가 맞다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "TIKR: AMD Stock Fell 8% in a Day as Lam Research's Supply Warning Sank Chip Stocks",
+     "url": "https://www.tikr.com/blog/amd-stock-fell-8-in-a-day-as-lam-researchs-supply-warning-sank-chip-stocks-heres-where-the-stock-could-go-by-2030"
+    },
+    {
+     "title": "Motley Fool: Why SpaceX Stock Dropped on Thursday (Oct 22)",
+     "url": "https://www.fool.com/investing/2026/10/22/why-spacex-stock-dropped-on-thursday/"
+    }
+   ]
+  },
+  {
+   "id": "US:TSLA",
+   "changed": false,
+   "text": "플래그 없음(-3.08%, ATR 3.37% 이내). 20·60일선 위 유지."
+  },
+  {
+   "id": "US:SPCX",
+   "changed": true,
+   "text": "144.75달러(-9.14%), 거래량 20일 평균의 2.11배로 실적 다음 날 전날 상승(+7.79%)을 모두 되돌리고 60일선(144.84) 바로 아래로 내려갔다(플래그). Yahoo Finance와 Motley Fool은 4분기 설비투자 가이던스 350억–400억 달러(3분기 196억 달러), 테슬라 합병 논의의 불확실성, 기술주 전반 약세를 이유로 들었다. JPMorgan·BofA의 목표가 상향은 오를 쪽, 큰 자금 수요와 아직 조건이 없는 합병 논의는 내릴 쪽 재료다. 상장 기간이 짧아 유사 패턴 표본이 없다. 진행 중인 AI 예측(상승 확률 0.55)은 그대로이며, 실적 전 저점보다 아래로 밀리면 실적 반응이 완전히 사라졌다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "Yahoo Finance: SpaceX stock slides as tech trade tumbles (Oct 22)",
+     "url": "https://finance.yahoo.com/markets/stocks/article/spacex-stock-slides-as-tech-trade-tumbles-191751177.html"
+    },
+    {
+     "title": "Motley Fool: Why SpaceX Stock Dropped on Thursday (Oct 22)",
+     "url": "https://www.fool.com/investing/2026/10/22/why-spacex-stock-dropped-on-thursday/"
+    }
+   ]
+  },
+  {
+   "id": "US:GOOGL",
+   "changed": true,
+   "text": "324.22달러(-3.15%)로 일간 변동이 ATR(2.75%)을 넘었고 5일 -7.16%, RSI 33.5다. 뚜렷한 뉴스는 확인하지 못함(조사 대상 3종목 밖). 유사 패턴 30개 중 56.7% 상승(기저율 58.1%, 표본 1,260)으로 패턴에 뚜렷한 쏠림은 없다. RSI가 30에 가까운 점은 반등 쪽, 20·60일선 아래는 하락 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.55)은 그대로이며, 60일선(345.5) 위 회복이 하락 흐름이 꺾였다고 볼 신호다."
+  },
+  {
+   "id": "US:AMD",
+   "changed": true,
+   "text": "507.93달러(-8.10%)로 60일선(532.1)을 아래로 내려갔다(플래그). 램리서치가 21일 실적 발표에서 공급망·클린룸 제약이 2027년까지 갈 수 있다고 밝힌 뒤 반도체주가 내렸고, AMD는 필라델피아 반도체지수(-6.72%)보다 더 내렸다. TIKR은 이익 추정치는 유지됐고 주가수익배수가 약 55배에서 46배로 내려간 것이라고 썼다. 추정치 유지는 오를 쪽, 20일 -19.28%와 60일선 이탈은 내릴 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.49)은 그대로이며, 500달러 근처를 거래량을 싣고 내주면 하락이 이어진다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "TIKR: AMD Stock Fell 8% in a Day as Lam Research's Supply Warning Sank Chip Stocks",
+     "url": "https://www.tikr.com/blog/amd-stock-fell-8-in-a-day-as-lam-researchs-supply-warning-sank-chip-stocks-heres-where-the-stock-could-go-by-2030"
+    },
+    {
+     "title": "24/7 Wall St.: Chip Stocks Fall as Supply Warning Deepens AI Selloff (Oct 22)",
+     "url": "https://247wallst.com/investing/2026/10/22/chip-stocks-fall-as-supply-warning-deepens-ai-selloff-marvell-and-amd-sink-8-intel-drops-7/"
+    }
+   ]
+  },
+  {
+   "id": "US:SPOT",
+   "changed": true,
+   "text": "583.66달러(+11.10%), 거래량 20일 평균의 3.23배로 거래량 급증·큰 변동·RSI 과열(70.5) 플래그가 함께 떴다. 22일 발표한 3분기에 유료 구독자 3억600만 명(가이던스보다 100만 명 많음), 월간 이용자 7억8,800만 명, 매출 49억6,900만 유로를 냈고 4분기 영업이익 가이던스는 8억2,000만 유로다. 주당순이익은 컨센서스(2.84달러)에 못 미친 2.48달러였다는 보도도 있다. 구독자·이익 가이던스는 오를 쪽, RSI 과열과 20일선(514.5)에서 크게 벌어진 위치는 되돌림 쪽 재료다. 진행 중인 AI 예측(상승 확률 0.60)은 그대로이며, 실적 당일 갭을 메우며 20일선 쪽으로 돌아가면 실적 반응이 약해졌다고 볼 신호다.",
+   "sources": [
+    {
+     "title": "Investing.com: Spotify Q3 2026 slides: margins expand as ad revenue accelerates",
+     "url": "https://www.investing.com/news/company-news/spotify-q3-2026-slides-margins-expand-as-ad-revenue-accelerates-93CH-4966363"
+    },
+    {
+     "title": "CelebrityAccess: Spotify Q3 2026: 788M Users And 306M Subscribers",
+     "url": "https://celebrityaccess.com/2026/10/23/spotify-q3-2026-788m-users-and-306m-subscribers/"
+    }
+   ]
+  },
+  {
+   "id": "US:PANW",
+   "changed": false,
+   "text": "특별한 신호 없음(+2.21%, ATR 5.08% 이내). 20·60일선 아래."
+  }
+ ],
+ "forecasts": []
+}
