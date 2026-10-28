@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-27T13:09:58+00:00",
+ "generatedAt": "2026-10-28T00:39:19+00:00",
  "sample": false,
  "asOf": {
-  "KR": "2026-10-27",
-  "US": "2026-10-26",
-  "FX": "2026-10-27"
+  "KR": "2026-10-28",
+  "US": "2026-10-27",
+  "FX": "2026-10-28"
  },
  "entries": [
   {
@@ -15,7 +15,7 @@
    "market": null,
    "file": "prices/IX-KOSPI.json",
    "available": true,
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "id": "IX:KOSDAQ",
@@ -25,7 +25,7 @@
    "market": null,
    "file": "prices/IX-KOSDAQ.json",
    "available": true,
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "id": "IX:SPX",
@@ -35,7 +35,7 @@
    "market": null,
    "file": "prices/IX-SPX.json",
    "available": true,
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "id": "IX:NDX",
@@ -45,7 +45,7 @@
    "market": null,
    "file": "prices/IX-NDX.json",
    "available": true,
-   "asOf": "2026-10-26"
+   "asOf": "2026-10-27"
   },
   {
    "id": "FX:USDKRW",
@@ -55,7 +55,7 @@
    "market": null,
    "file": "prices/FX-USDKRW.json",
    "available": true,
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "id": "KR:005930",
@@ -65,7 +65,7 @@
    "market": "KOSPI",
    "file": "prices/KR-005930.json",
    "available": true,
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "id": "KR:000660",
@@ -75,7 +75,7 @@
    "market": "KOSPI",
    "file": "prices/KR-000660.json",
    "available": true,
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "id": "KR:207940",
@@ -85,7 +85,7 @@
    "market": "KOSPI",
    "file": "prices/KR-207940.json",
    "available": true,
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "id": "KR:012450",
@@ -95,7 +95,7 @@
    "market": "KOSPI",
    "file": "prices/KR-012450.json",
    "available": true,
-   "asOf": "2026-10-27"
+   "asOf": "2026-10-28"
   },
   {
    "id": "US:NVDA",
