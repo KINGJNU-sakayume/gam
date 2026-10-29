@@ -1,33 +1,33 @@
 {
- "generatedAt": "2026-10-29T01:08:48+00:00",
+ "generatedAt": "2026-10-29T14:13:53+00:00",
  "results": [
   {
    "id": "IX:KOSPI",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
+   "rows": 2447,
    "asOf": "2026-10-29"
   },
   {
    "id": "IX:KOSDAQ",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
+   "rows": 2447,
    "asOf": "2026-10-29"
   },
   {
    "id": "IX:SPX",
    "ok": true,
    "source": "yahoo",
-   "rows": 2512,
-   "asOf": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   },
   {
    "id": "IX:NDX",
    "ok": true,
    "source": "yahoo",
-   "rows": 2512,
-   "asOf": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   },
   {
    "id": "FX:USDKRW",
@@ -68,65 +68,57 @@
    "id": "US:NVDA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2511,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:META",
    "ok": true,
    "source": "yahoo",
-   "rows": 2511,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:TSLA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2511,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:SPCX",
    "ok": true,
    "source": "yahoo",
-   "rows": 95,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 97,
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:GOOGL",
    "ok": true,
    "source": "yahoo",
-   "rows": 2511,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:AMD",
    "ok": true,
    "source": "yahoo",
-   "rows": 2511,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:SPOT",
    "ok": true,
    "source": "yahoo",
-   "rows": 2155,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 2157,
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:PANW",
    "ok": true,
    "source": "yahoo",
-   "rows": 2511,
-   "asOf": "2026-10-27",
-   "droppedTail": "2026-10-28"
+   "rows": 2513,
+   "asOf": "2026-10-29"
   }
  ]
 }
