@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T14:04:41+00:00",
+ "generatedAt": "2026-10-31T00:57:16+00:00",
  "sample": false,
  "asOf": {
   "KR": "2026-10-30",
@@ -15,7 +15,7 @@
    "market": null,
    "file": "prices/IX-KOSPI.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "IX:KOSDAQ",
@@ -25,7 +25,7 @@
    "market": null,
    "file": "prices/IX-KOSDAQ.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "IX:SPX",
@@ -105,7 +105,7 @@
    "market": "NASDAQ",
    "file": "prices/US-NVDA.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:META",
@@ -115,7 +115,7 @@
    "market": "NASDAQ",
    "file": "prices/US-META.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:TSLA",
@@ -125,7 +125,7 @@
    "market": "NASDAQ",
    "file": "prices/US-TSLA.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:SPCX",
@@ -135,7 +135,7 @@
    "market": "NASDAQ",
    "file": "prices/US-SPCX.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:GOOGL",
@@ -145,7 +145,7 @@
    "market": "NASDAQ",
    "file": "prices/US-GOOGL.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:AMD",
@@ -155,7 +155,7 @@
    "market": "NASDAQ",
    "file": "prices/US-AMD.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:SPOT",
@@ -165,7 +165,7 @@
    "market": "NYSE",
    "file": "prices/US-SPOT.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   },
   {
    "id": "US:PANW",
@@ -175,7 +175,7 @@
    "market": "NASDAQ",
    "file": "prices/US-PANW.json",
    "available": true,
-   "asOf": "2026-10-30"
+   "asOf": "2026-10-29"
   }
  ]
 }

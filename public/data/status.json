@@ -1,19 +1,21 @@
 {
- "generatedAt": "2026-10-30T14:04:40+00:00",
+ "generatedAt": "2026-10-31T00:57:14+00:00",
  "results": [
   {
    "id": "IX:KOSPI",
    "ok": true,
    "source": "yahoo",
-   "rows": 2448,
-   "asOf": "2026-10-30"
+   "rows": 2447,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "IX:KOSDAQ",
    "ok": true,
    "source": "yahoo",
-   "rows": 2448,
-   "asOf": "2026-10-30"
+   "rows": 2447,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "IX:SPX",
@@ -68,57 +70,65 @@
    "id": "US:NVDA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-10-30"
+   "rows": 2513,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "US:META",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-10-30"
+   "rows": 2513,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "US:TSLA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-10-30"
+   "rows": 2513,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "US:SPCX",
    "ok": true,
    "source": "yahoo",
-   "rows": 98,
-   "asOf": "2026-10-30"
+   "rows": 97,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "US:GOOGL",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-10-30"
+   "rows": 2513,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "US:AMD",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-10-30"
+   "rows": 2513,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "US:SPOT",
    "ok": true,
    "source": "yahoo",
-   "rows": 2158,
-   "asOf": "2026-10-30"
+   "rows": 2157,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   },
   {
    "id": "US:PANW",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-10-30"
+   "rows": 2513,
+   "asOf": "2026-10-29",
+   "droppedTail": "2026-10-30"
   }
  ]
 }
