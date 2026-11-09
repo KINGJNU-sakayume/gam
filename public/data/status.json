@@ -1,53 +1,53 @@
 {
- "generatedAt": "2026-11-07T07:28:50+00:00",
+ "generatedAt": "2026-11-09T17:26:53+00:00",
  "results": [
   {
    "id": "IX:KOSPI",
    "ok": true,
    "source": "yahoo",
-   "rows": 2448,
+   "rows": 2446,
    "asOf": "2026-11-06"
   },
   {
    "id": "IX:KOSDAQ",
    "ok": true,
    "source": "yahoo",
-   "rows": 2448,
+   "rows": 2446,
    "asOf": "2026-11-06"
   },
   {
    "id": "IX:SPX",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   },
   {
    "id": "IX:NDX",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   },
   {
    "id": "FX:USDKRW",
    "ok": true,
    "source": "yahoo",
-   "rows": 2602,
-   "asOf": "2026-11-06"
+   "rows": 2601,
+   "asOf": "2026-11-09"
   },
   {
    "id": "KR:005930",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
+   "rows": 2445,
    "asOf": "2026-11-06"
   },
   {
    "id": "KR:000660",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
+   "rows": 2445,
    "asOf": "2026-11-06"
   },
   {
@@ -61,64 +61,64 @@
    "id": "KR:012450",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
+   "rows": 2445,
    "asOf": "2026-11-06"
   },
   {
    "id": "US:NVDA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:META",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:TSLA",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:SPCX",
    "ok": true,
    "source": "yahoo",
-   "rows": 103,
-   "asOf": "2026-11-06"
+   "rows": 104,
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:GOOGL",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:AMD",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:SPOT",
    "ok": true,
    "source": "yahoo",
-   "rows": 2163,
-   "asOf": "2026-11-06"
+   "rows": 2164,
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:PANW",
    "ok": true,
    "source": "yahoo",
-   "rows": 2514,
-   "asOf": "2026-11-06"
+   "rows": 2513,
+   "asOf": "2026-11-09"
   }
  ]
 }

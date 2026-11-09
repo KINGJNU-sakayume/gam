@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-07T07:28:51+00:00",
+ "generatedAt": "2026-11-09T17:26:54+00:00",
  "sample": false,
  "asOf": {
   "KR": "2026-11-06",
-  "US": "2026-11-06",
-  "FX": "2026-11-06"
+  "US": "2026-11-09",
+  "FX": "2026-11-09"
  },
  "entries": [
   {
@@ -35,7 +35,7 @@
    "market": null,
    "file": "prices/IX-SPX.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "IX:NDX",
@@ -45,7 +45,7 @@
    "market": null,
    "file": "prices/IX-NDX.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "FX:USDKRW",
@@ -55,7 +55,7 @@
    "market": null,
    "file": "prices/FX-USDKRW.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "KR:005930",
@@ -105,7 +105,7 @@
    "market": "NASDAQ",
    "file": "prices/US-NVDA.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:META",
@@ -115,7 +115,7 @@
    "market": "NASDAQ",
    "file": "prices/US-META.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:TSLA",
@@ -125,7 +125,7 @@
    "market": "NASDAQ",
    "file": "prices/US-TSLA.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:SPCX",
@@ -135,7 +135,7 @@
    "market": "NASDAQ",
    "file": "prices/US-SPCX.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:GOOGL",
@@ -145,7 +145,7 @@
    "market": "NASDAQ",
    "file": "prices/US-GOOGL.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:AMD",
@@ -155,7 +155,7 @@
    "market": "NASDAQ",
    "file": "prices/US-AMD.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:SPOT",
@@ -165,7 +165,7 @@
    "market": "NYSE",
    "file": "prices/US-SPOT.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   },
   {
    "id": "US:PANW",
@@ -175,7 +175,7 @@
    "market": "NASDAQ",
    "file": "prices/US-PANW.json",
    "available": true,
-   "asOf": "2026-11-06"
+   "asOf": "2026-11-09"
   }
  ]
 }
