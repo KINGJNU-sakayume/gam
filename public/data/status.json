@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T01:34:29+00:00",
+ "generatedAt": "2026-11-14T07:46:37+00:00",
  "results": [
   {
    "id": "IX:KOSPI",
@@ -12,9 +12,8 @@
    "id": "IX:KOSDAQ",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
-   "asOf": "2026-11-12",
-   "droppedTail": "2026-11-13"
+   "rows": 2448,
+   "asOf": "2026-11-13"
   },
   {
    "id": "IX:SPX",
@@ -34,8 +33,8 @@
    "id": "FX:USDKRW",
    "ok": true,
    "source": "yahoo",
-   "rows": 2602,
-   "asOf": "2026-11-13"
+   "rows": 2603,
+   "asOf": "2026-11-14"
   },
   {
    "id": "KR:005930",
@@ -76,9 +75,8 @@
    "id": "US:META",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-11-12",
-   "droppedTail": "2026-11-13"
+   "rows": 2514,
+   "asOf": "2026-11-13"
   },
   {
    "id": "US:TSLA",
@@ -91,9 +89,8 @@
    "id": "US:SPCX",
    "ok": true,
    "source": "yahoo",
-   "rows": 107,
-   "asOf": "2026-11-12",
-   "droppedTail": "2026-11-13"
+   "rows": 108,
+   "asOf": "2026-11-13"
   },
   {
    "id": "US:GOOGL",
@@ -113,17 +110,15 @@
    "id": "US:SPOT",
    "ok": true,
    "source": "yahoo",
-   "rows": 2167,
-   "asOf": "2026-11-12",
-   "droppedTail": "2026-11-13"
+   "rows": 2168,
+   "asOf": "2026-11-13"
   },
   {
    "id": "US:PANW",
    "ok": true,
    "source": "yahoo",
-   "rows": 2513,
-   "asOf": "2026-11-12",
-   "droppedTail": "2026-11-13"
+   "rows": 2514,
+   "asOf": "2026-11-13"
   }
  ]
 }
