@@ -52,6 +52,9 @@ npm run preview     # http://127.0.0.1:4173/?sample
 npm test            # 체결·예측·리플레이 엔진 (Bun)
 npm run test:pipeline
 npm run typecheck
+npm run check:notes  # AI 노트 형식·규칙 검사 (scripts/check-notes.mjs)
+npm run check        # typecheck + test + test:pipeline + check:notes — push 전에 실행
+npm run build        # 사이트 빌드 (scripts/build.mjs); 샘플 포함 미리보기는 npm run preview
 ```
 
 | 폴더 | 내용 |
