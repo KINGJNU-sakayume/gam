@@ -1,10 +1,10 @@
 {
  "asOf": {
   "KR": "2026-11-20",
-  "US": "2026-11-20",
-  "FX": "2026-11-20"
+  "US": "2026-11-23",
+  "FX": "2026-11-23"
  },
- "generatedAt": "2026-11-21T08:30:00+00:00",
+ "generatedAt": "2026-11-23T19:12:18+00:00",
  "sample": false,
  "cards": [
   {
@@ -42,7 +42,7 @@
     "p90": 0.1046
    },
    "flags": [],
-   "history": 2448,
+   "history": 2446,
    "kind": "index"
   },
   {
@@ -80,115 +80,114 @@
     "p90": 0.0821
    },
    "flags": [],
-   "history": 2448,
+   "history": 2446,
    "kind": "index"
   },
   {
    "id": "IX:SPX",
-   "date": "2026-11-20",
-   "close": 6910.3901,
-   "chg1d": -0.037,
-   "chg5d": -0.0861,
-   "chg20d": -0.0936,
+   "date": "2026-11-23",
+   "close": 7243.46,
+   "chg1d": 0.0482,
+   "chg5d": -0.0233,
+   "chg20d": -0.0564,
    "sma": {
-    "20": 7499.2315,
-    "60": 7633.061,
-    "120": 7586.283
+    "20": 7477.566,
+    "60": 7625.256,
+    "120": 7583.6978
    },
-   "rsi14": 24.7,
-   "atrPct": 0.0194,
-   "volRatio20": 1.2,
-   "from52wHigh": -0.1191,
-   "from52wLow": 0.094,
-   "pattern": {
-    "window": 40,
-    "horizon": 20,
-    "matches": 30,
-    "upShare": 0.8,
-    "median": 0.0405,
-    "p10": -0.0125,
-    "p90": 0.0967
-   },
-   "baseRate": {
-    "horizon": 20,
-    "samples": 1260,
-    "upShare": 0.6294,
-    "median": 0.014,
-    "p10": -0.0496,
-    "p90": 0.0556
-   },
-   "flags": [
-    "rsi-oversold"
-   ],
-   "history": 2514,
-   "kind": "index"
-  },
-  {
-   "id": "IX:NDX",
-   "date": "2026-11-20",
-   "close": 22617.7305,
-   "chg1d": -0.0528,
-   "chg5d": -0.1002,
-   "chg20d": -0.1286,
-   "sma": {
-    "20": 25101.9266,
-    "60": 26149.0578,
-    "120": 26062.0389
-   },
-   "rsi14": 25.6,
-   "atrPct": 0.0277,
-   "volRatio20": 1.37,
-   "from52wHigh": -0.1841,
-   "from52wLow": 0.0932,
-   "pattern": {
-    "window": 40,
-    "horizon": 20,
-    "matches": 30,
-    "upShare": 0.7,
-    "median": 0.063,
-    "p10": -0.0699,
-    "p90": 0.1818
-   },
-   "baseRate": {
-    "horizon": 20,
-    "samples": 1260,
-    "upShare": 0.6032,
-    "median": 0.0154,
-    "p10": -0.0683,
-    "p90": 0.0755
-   },
-   "flags": [
-    "big-move",
-    "rsi-oversold"
-   ],
-   "history": 2514,
-   "kind": "index"
-  },
-  {
-   "id": "FX:USDKRW",
-   "date": "2026-11-20",
-   "close": 1334.79,
-   "chg1d": 0.0033,
-   "chg5d": 0.0008,
-   "chg20d": 0.0066,
-   "sma": {
-    "20": 1337.3455,
-    "60": 1346.0973,
-    "120": 1410.3148
-   },
-   "rsi14": 46.8,
-   "atrPct": 0.0102,
-   "volRatio20": null,
-   "from52wHigh": -0.1593,
-   "from52wLow": 0.0116,
+   "rsi14": 41.6,
+   "atrPct": 0.021,
+   "volRatio20": 0.43,
+   "from52wHigh": -0.0766,
+   "from52wLow": 0.1467,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
     "upShare": 0.6667,
-    "median": 0.0112,
-    "p10": -0.0293,
-    "p90": 0.0363
+    "median": 0.0366,
+    "p10": -0.0477,
+    "p90": 0.1154
+   },
+   "baseRate": {
+    "horizon": 20,
+    "samples": 1260,
+    "upShare": 0.6286,
+    "median": 0.0139,
+    "p10": -0.0498,
+    "p90": 0.0556
+   },
+   "flags": [
+    "big-move"
+   ],
+   "history": 2513,
+   "kind": "index"
+  },
+  {
+   "id": "IX:NDX",
+   "date": "2026-11-23",
+   "close": 24100.7617,
+   "chg1d": 0.0656,
+   "chg5d": -0.0167,
+   "chg20d": -0.079,
+   "sma": {
+    "20": 24998.4956,
+    "60": 26110.6968,
+    "120": 26039.0955
+   },
+   "rsi14": 41.8,
+   "atrPct": 0.0293,
+   "volRatio20": 0.7,
+   "from52wHigh": -0.1307,
+   "from52wLow": 0.1648,
+   "pattern": {
+    "window": 40,
+    "horizon": 20,
+    "matches": 30,
+    "upShare": 0.6,
+    "median": 0.0373,
+    "p10": -0.0792,
+    "p90": 0.197
+   },
+   "baseRate": {
+    "horizon": 20,
+    "samples": 1260,
+    "upShare": 0.6024,
+    "median": 0.0153,
+    "p10": -0.0686,
+    "p90": 0.0755
+   },
+   "flags": [
+    "big-move"
+   ],
+   "history": 2513,
+   "kind": "index"
+  },
+  {
+   "id": "FX:USDKRW",
+   "date": "2026-11-23",
+   "close": 1341.58,
+   "chg1d": 0.0051,
+   "chg5d": 0.0062,
+   "chg20d": 0.015,
+   "sma": {
+    "20": 1338.3365,
+    "60": 1345.5052,
+    "120": 1408.5407
+   },
+   "rsi14": 51.4,
+   "atrPct": 0.0103,
+   "volRatio20": null,
+   "from52wHigh": -0.155,
+   "from52wLow": 0.0167,
+   "pattern": {
+    "window": 40,
+    "horizon": 20,
+    "matches": 30,
+    "upShare": 0.5667,
+    "median": 0.0019,
+    "p10": -0.0273,
+    "p90": 0.0376
    },
    "baseRate": {
     "horizon": 20,
@@ -199,7 +198,7 @@
     "p90": 0.0333
    },
    "flags": [],
-   "history": 2602,
+   "history": 2601,
    "kind": "index"
   },
   {
@@ -237,7 +236,7 @@
     "p90": 0.1532
    },
    "flags": [],
-   "history": 2447,
+   "history": 2445,
    "kind": "stock"
   },
   {
@@ -275,7 +274,7 @@
     "p90": 0.2498
    },
    "flags": [],
-   "history": 2447,
+   "history": 2445,
    "kind": "stock"
   },
   {
@@ -313,7 +312,7 @@
     "p90": 0.0989
    },
    "flags": [],
-   "history": 2447,
+   "history": 2445,
    "kind": "stock"
   },
   {
@@ -354,312 +353,309 @@
     "new-52w-low",
     "rsi-oversold"
    ],
-   "history": 2447,
+   "history": 2445,
    "kind": "stock"
   },
   {
    "id": "US:NVDA",
-   "date": "2026-11-20",
-   "close": 125.53,
-   "chg1d": -0.1401,
-   "chg5d": -0.2292,
-   "chg20d": -0.405,
+   "date": "2026-11-23",
+   "close": 164.245,
+   "chg1d": 0.3084,
+   "chg5d": 0.0519,
+   "chg20d": -0.2396,
    "sma": {
-    "20": 181.457,
-    "60": 209.551,
-    "120": 208.7719
+    "20": 178.8693,
+    "60": 208.6666,
+    "120": 208.3551
    },
-   "rsi14": 15.0,
-   "atrPct": 0.0853,
-   "volRatio20": 2.41,
-   "from52wHigh": -0.4842,
-   "from52wLow": 0.0083,
+   "rsi14": 42.5,
+   "atrPct": 0.0805,
+   "volRatio20": 2.1,
+   "from52wHigh": -0.3251,
+   "from52wLow": 0.3192,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.9333,
-    "median": 0.19,
-    "p10": 0.0389,
-    "p90": 0.3759
+    "upShare": 0.8,
+    "median": 0.212,
+    "p10": -0.1049,
+    "p90": 0.5274
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
-    "upShare": 0.6087,
-    "median": 0.0299,
-    "p10": -0.1301,
-    "p90": 0.2413
+    "upShare": 0.6079,
+    "median": 0.0297,
+    "p10": -0.1324,
+    "p90": 0.24
    },
    "flags": [
     "volume-spike",
-    "new-52w-low",
-    "rsi-oversold"
+    "big-move"
    ],
-   "history": 2514,
+   "history": 2513,
    "kind": "stock"
   },
   {
    "id": "US:META",
-   "date": "2026-11-20",
-   "close": 560.84,
-   "chg1d": -0.0593,
-   "chg5d": -0.126,
-   "chg20d": -0.1273,
+   "date": "2026-11-23",
+   "close": 598.74,
+   "chg1d": 0.0676,
+   "chg5d": -0.0442,
+   "chg20d": -0.0505,
    "sma": {
-    "20": 618.5645,
-    "60": 665.5665,
-    "120": 628.4332
+    "20": 616.9735,
+    "60": 665.9195,
+    "120": 628.2401
    },
-   "rsi14": 30.3,
-   "atrPct": 0.0415,
-   "volRatio20": 1.21,
-   "from52wHigh": -0.2808,
-   "from52wLow": 0.0799,
-   "pattern": {
-    "window": 40,
-    "horizon": 20,
-    "matches": 30,
-    "upShare": 0.7667,
-    "median": 0.0597,
-    "p10": -0.0735,
-    "p90": 0.2415
-   },
-   "baseRate": {
-    "horizon": 20,
-    "samples": 1260,
-    "upShare": 0.5587,
-    "median": 0.0211,
-    "p10": -0.1356,
-    "p90": 0.1639
-   },
-   "flags": [],
-   "history": 2514,
-   "kind": "stock"
-  },
-  {
-   "id": "US:TSLA",
-   "date": "2026-11-20",
-   "close": 345.82,
-   "chg1d": -0.0764,
-   "chg5d": -0.1138,
-   "chg20d": -0.0709,
-   "sma": {
-    "20": 384.7985,
-    "60": 373.45,
-    "120": 371.0007
-   },
-   "rsi14": 37.8,
-   "atrPct": 0.0496,
-   "volRatio20": 1.27,
-   "from52wHigh": -0.3067,
-   "from52wLow": 0.1629,
-   "pattern": {
-    "window": 40,
-    "horizon": 20,
-    "matches": 30,
-    "upShare": 0.6667,
-    "median": 0.0515,
-    "p10": -0.1383,
-    "p90": 0.1922
-   },
-   "baseRate": {
-    "horizon": 20,
-    "samples": 1260,
-    "upShare": 0.4881,
-    "median": -0.0062,
-    "p10": -0.1809,
-    "p90": 0.2619
-   },
-   "flags": [
-    "cross-sma60-down"
-   ],
-   "history": 2514,
-   "kind": "stock"
-  },
-  {
-   "id": "US:SPCX",
-   "date": "2026-11-20",
-   "close": 127.79,
-   "chg1d": -0.0769,
-   "chg5d": -0.0814,
-   "chg20d": -0.1336,
-   "sma": {
-    "20": 139.1775,
-    "60": 147.5313,
-    "120": null
-   },
-   "rsi14": 38.5,
-   "atrPct": 0.0632,
-   "volRatio20": 1.21,
-   "from52wHigh": -0.4337,
-   "from52wLow": 0.219,
-   "pattern": null,
-   "baseRate": {
-    "horizon": 20,
-    "samples": 93,
-    "upShare": 0.4946,
-    "median": -0.0029,
-    "p10": -0.2683,
-    "p90": 0.1885
-   },
-   "flags": [],
-   "history": 113,
-   "kind": "stock"
-  },
-  {
-   "id": "US:GOOGL",
-   "date": "2026-11-20",
-   "close": 265.29,
-   "chg1d": -0.027,
-   "chg5d": -0.1031,
-   "chg20d": -0.1715,
-   "sma": {
-    "20": 289.4495,
-    "60": 324.8845,
-    "120": 338.5719
-   },
-   "rsi14": 27.8,
-   "atrPct": 0.0427,
-   "volRatio20": 1.33,
-   "from52wHigh": -0.3499,
-   "from52wLow": 0.004,
-   "pattern": {
-    "window": 40,
-    "horizon": 20,
-    "matches": 30,
-    "upShare": 0.6667,
-    "median": 0.0295,
-    "p10": -0.0394,
-    "p90": 0.1539
-   },
-   "baseRate": {
-    "horizon": 20,
-    "samples": 1260,
-    "upShare": 0.5659,
-    "median": 0.0121,
-    "p10": -0.0946,
-    "p90": 0.1258
-   },
-   "flags": [
-    "new-52w-low",
-    "rsi-oversold"
-   ],
-   "history": 2514,
-   "kind": "stock"
-  },
-  {
-   "id": "US:AMD",
-   "date": "2026-11-20",
-   "close": 424.39,
-   "chg1d": -0.1325,
-   "chg5d": -0.2054,
-   "chg20d": -0.1788,
-   "sma": {
-    "20": 509.081,
-    "60": 541.4692,
-    "120": 523.6978
-   },
-   "rsi14": 38.4,
-   "atrPct": 0.107,
-   "volRatio20": 1.77,
-   "from52wHigh": -0.3555,
-   "from52wLow": 1.2548,
+   "rsi14": 42.0,
+   "atrPct": 0.0408,
+   "volRatio20": 0.54,
+   "from52wHigh": -0.2322,
+   "from52wLow": 0.1528,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
     "upShare": 0.6,
-    "median": 0.0456,
-    "p10": -0.2864,
-    "p90": 0.3274
+    "median": 0.0493,
+    "p10": -0.0732,
+    "p90": 0.2108
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
-    "upShare": 0.5087,
-    "median": 0.0045,
-    "p10": -0.1559,
-    "p90": 0.2721
+    "upShare": 0.5579,
+    "median": 0.0209,
+    "p10": -0.1356,
+    "p90": 0.1639
    },
    "flags": [],
-   "history": 2514,
+   "history": 2513,
    "kind": "stock"
   },
   {
-   "id": "US:SPOT",
-   "date": "2026-11-20",
-   "close": 577.03,
-   "chg1d": -0.0117,
-   "chg5d": -0.0581,
-   "chg20d": -0.0123,
+   "id": "US:TSLA",
+   "date": "2026-11-23",
+   "close": 387.25,
+   "chg1d": 0.1198,
+   "chg5d": 0.0198,
+   "chg20d": -0.0112,
    "sma": {
-    "20": 593.607,
-    "60": 548.0532,
-    "120": 519.5717
+    "20": 384.58,
+    "60": 374.0917,
+    "120": 370.6969
    },
-   "rsi14": 48.6,
-   "atrPct": 0.0361,
-   "volRatio20": 0.87,
-   "from52wHigh": -0.0913,
-   "from52wLow": 0.4248,
+   "rsi14": 52.6,
+   "atrPct": 0.05,
+   "volRatio20": 0.8,
+   "from52wHigh": -0.2237,
+   "from52wLow": 0.3022,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.6667,
-    "median": 0.0611,
-    "p10": -0.1191,
-    "p90": 0.2084
+    "upShare": 0.5667,
+    "median": 0.0225,
+    "p10": -0.1761,
+    "p90": 0.2431
+   },
+   "baseRate": {
+    "horizon": 20,
+    "samples": 1260,
+    "upShare": 0.4873,
+    "median": -0.0064,
+    "p10": -0.1809,
+    "p90": 0.2619
+   },
+   "flags": [
+    "big-move",
+    "cross-sma60-up"
+   ],
+   "history": 2513,
+   "kind": "stock"
+  },
+  {
+   "id": "US:SPCX",
+   "date": "2026-11-23",
+   "close": 134.94,
+   "chg1d": 0.056,
+   "chg5d": -0.0176,
+   "chg20d": -0.0814,
+   "sma": {
+    "20": 138.5795,
+    "60": 147.422,
+    "120": null
+   },
+   "rsi14": 45.1,
+   "atrPct": 0.063,
+   "volRatio20": 0.68,
+   "from52wHigh": -0.402,
+   "from52wLow": 0.2872,
+   "pattern": null,
+   "baseRate": {
+    "horizon": 20,
+    "samples": 94,
+    "upShare": 0.4894,
+    "median": -0.0036,
+    "p10": -0.2675,
+    "p90": 0.1881
+   },
+   "flags": [],
+   "history": 114,
+   "kind": "stock"
+  },
+  {
+   "id": "US:GOOGL",
+   "date": "2026-11-23",
+   "close": 283.0,
+   "chg1d": 0.0668,
+   "chg5d": -0.0025,
+   "chg20d": -0.1067,
+   "sma": {
+    "20": 287.7595,
+    "60": 323.8283,
+    "120": 337.9423
+   },
+   "rsi14": 41.6,
+   "atrPct": 0.0421,
+   "volRatio20": 0.59,
+   "from52wHigh": -0.3065,
+   "from52wLow": 0.0711,
+   "pattern": {
+    "window": 40,
+    "horizon": 20,
+    "matches": 30,
+    "upShare": 0.5,
+    "median": -0.0013,
+    "p10": -0.0791,
+    "p90": 0.1116
+   },
+   "baseRate": {
+    "horizon": 20,
+    "samples": 1260,
+    "upShare": 0.5651,
+    "median": 0.012,
+    "p10": -0.0953,
+    "p90": 0.1258
+   },
+   "flags": [],
+   "history": 2513,
+   "kind": "stock"
+  },
+  {
+   "id": "US:AMD",
+   "date": "2026-11-23",
+   "close": 452.78,
+   "chg1d": 0.0669,
+   "chg5d": -0.1021,
+   "chg20d": -0.1478,
+   "sma": {
+    "20": 505.156,
+    "60": 541.2558,
+    "120": 522.9499
+   },
+   "rsi14": 42.5,
+   "atrPct": 0.1015,
+   "volRatio20": 0.82,
+   "from52wHigh": -0.3124,
+   "from52wLow": 1.4056,
+   "pattern": {
+    "window": 40,
+    "horizon": 20,
+    "matches": 30,
+    "upShare": 0.4,
+    "median": -0.0805,
+    "p10": -0.3321,
+    "p90": 0.2044
+   },
+   "baseRate": {
+    "horizon": 20,
+    "samples": 1260,
+    "upShare": 0.5079,
+    "median": 0.004,
+    "p10": -0.1559,
+    "p90": 0.2721
+   },
+   "flags": [],
+   "history": 2513,
+   "kind": "stock"
+  },
+  {
+   "id": "US:SPOT",
+   "date": "2026-11-23",
+   "close": 583.14,
+   "chg1d": 0.0106,
+   "chg5d": -0.0467,
+   "chg20d": 0.0188,
+   "sma": {
+    "20": 594.146,
+    "60": 548.647,
+    "120": 520.3684
+   },
+   "rsi14": 50.7,
+   "atrPct": 0.0352,
+   "volRatio20": 0.62,
+   "from52wHigh": -0.0817,
+   "from52wLow": 0.4399,
+   "pattern": {
+    "window": 40,
+    "horizon": 20,
+    "matches": 30,
+    "upShare": 0.7,
+    "median": 0.0612,
+    "p10": -0.116,
+    "p90": 0.2216
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
     "upShare": 0.5833,
-    "median": 0.0277,
+    "median": 0.0276,
     "p10": -0.1411,
     "p90": 0.1686
    },
    "flags": [],
-   "history": 2173,
+   "history": 2174,
    "kind": "stock"
   },
   {
    "id": "US:PANW",
-   "date": "2026-11-20",
-   "close": 343.32,
-   "chg1d": -0.0509,
-   "chg5d": 0.0654,
-   "chg20d": -0.0978,
+   "date": "2026-11-23",
+   "close": 354.11,
+   "chg1d": 0.0314,
+   "chg5d": 0.1203,
+   "chg20d": -0.0931,
    "sma": {
-    "20": 345.9265,
-    "60": 363.6965,
-    "120": 347.0707
+    "20": 344.109,
+    "60": 363.4052,
+    "120": 347.6847
    },
-   "rsi14": 48.8,
-   "atrPct": 0.0601,
-   "volRatio20": 1.67,
-   "from52wHigh": -0.2059,
-   "from52wLow": 1.4598,
+   "rsi14": 52.0,
+   "atrPct": 0.0589,
+   "volRatio20": 0.76,
+   "from52wHigh": -0.1809,
+   "from52wLow": 1.5371,
    "pattern": {
     "window": 40,
     "horizon": 20,
     "matches": 30,
-    "upShare": 0.3333,
-    "median": -0.0314,
-    "p10": -0.225,
-    "p90": 0.1535
+    "upShare": 0.5333,
+    "median": 0.0018,
+    "p10": -0.2493,
+    "p90": 0.1491
    },
    "baseRate": {
     "horizon": 20,
     "samples": 1260,
-    "upShare": 0.5913,
+    "upShare": 0.5905,
     "median": 0.023,
     "p10": -0.1171,
     "p90": 0.1743
    },
    "flags": [],
-   "history": 2514,
+   "history": 2513,
    "kind": "stock"
   }
  ]
