@@ -1,19 +1,19 @@
 {
- "generatedAt": "2026-11-24T18:51:58+00:00",
+ "generatedAt": "2026-11-25T04:28:22+00:00",
  "results": [
   {
    "id": "IX:KOSPI",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
-   "asOf": "2026-11-23"
+   "rows": 2447,
+   "asOf": "2026-11-25"
   },
   {
    "id": "IX:KOSDAQ",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
-   "asOf": "2026-11-23"
+   "rows": 2447,
+   "asOf": "2026-11-25"
   },
   {
    "id": "IX:SPX",
@@ -34,35 +34,35 @@
    "ok": true,
    "source": "yahoo",
    "rows": 2601,
-   "asOf": "2026-11-24"
+   "asOf": "2026-11-25"
   },
   {
    "id": "KR:005930",
    "ok": true,
    "source": "yahoo",
-   "rows": 2445,
-   "asOf": "2026-11-23"
+   "rows": 2446,
+   "asOf": "2026-11-25"
   },
   {
    "id": "KR:000660",
    "ok": true,
    "source": "yahoo",
-   "rows": 2445,
-   "asOf": "2026-11-23"
+   "rows": 2446,
+   "asOf": "2026-11-25"
   },
   {
    "id": "KR:207940",
    "ok": true,
    "source": "yahoo",
-   "rows": 2445,
-   "asOf": "2026-11-23"
+   "rows": 2446,
+   "asOf": "2026-11-25"
   },
   {
    "id": "KR:012450",
    "ok": true,
    "source": "yahoo",
-   "rows": 2445,
-   "asOf": "2026-11-23"
+   "rows": 2446,
+   "asOf": "2026-11-25"
   },
   {
    "id": "US:NVDA",
