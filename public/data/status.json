@@ -1,19 +1,19 @@
 {
- "generatedAt": "2026-11-26T03:42:00+00:00",
+ "generatedAt": "2026-11-26T17:41:25+00:00",
  "results": [
   {
    "id": "IX:KOSPI",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
-   "asOf": "2026-11-26"
+   "rows": 2446,
+   "asOf": "2026-11-25"
   },
   {
    "id": "IX:KOSDAQ",
    "ok": true,
    "source": "yahoo",
-   "rows": 2447,
-   "asOf": "2026-11-26"
+   "rows": 2446,
+   "asOf": "2026-11-25"
   },
   {
    "id": "IX:SPX",
@@ -40,29 +40,29 @@
    "id": "KR:005930",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
-   "asOf": "2026-11-26"
+   "rows": 2445,
+   "asOf": "2026-11-25"
   },
   {
    "id": "KR:000660",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
-   "asOf": "2026-11-26"
+   "rows": 2445,
+   "asOf": "2026-11-25"
   },
   {
    "id": "KR:207940",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
-   "asOf": "2026-11-26"
+   "rows": 2445,
+   "asOf": "2026-11-25"
   },
   {
    "id": "KR:012450",
    "ok": true,
    "source": "yahoo",
-   "rows": 2446,
-   "asOf": "2026-11-26"
+   "rows": 2445,
+   "asOf": "2026-11-25"
   },
   {
    "id": "US:NVDA",
